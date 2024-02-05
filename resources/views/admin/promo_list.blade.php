@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Промокоды - Бот</div>
+<div id="__ajax_title" style="display: none">Promo codes - Bot</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <div class="kt-portlet kt-portlet--mobile" id="users_container">
         <div class="kt-portlet__body kt-portlet__body--fit">
@@ -6,7 +6,7 @@
                 <table class="kt-datatable__table" style="display: block;">
                     <thead class="kt-datatable__head">
                         <tr class="kt-datatable__row" style="left: 0px;">
-                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 200px;">Пользователь</span></th>
+                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 200px;">User</span></th>
                          </tr>
                     </thead>
                     <tbody class="kt-datatable__body" id="users"></tbody>
@@ -19,7 +19,7 @@
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Добавить</h5>
+                <h5 class="modal-title">Add</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -28,13 +28,13 @@
                     <input type="text" class="form-control" id="vkid">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Заметка:</label>
+                    <label class="form-control-label">Note:</label>
                     <input type="text" class="form-control" value="Без заметки" id="group">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="create" onclick="send('#new', '/admin/promo_list/add/'+$('#vkid').val()+'/'+$('#group').val(), function() { window.location.reload(); })">Добавить</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="create" onclick="send('#new', '/admin/promo_list/add/'+$('#vkid').val()+'/'+$('#group').val(), function() { window.location.reload(); })">Add</button>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
-<div id="__ajax_title" style="display: none">@if(Auth::user()->chat_role < 3) Статистика регистраций пользователей @else Подкрутка @endif</div>
+<div id="__ajax_title" style="display: none">@if(Auth::user()->chat_role < 3) User registration statistics @else Подкрутка @endif</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     @if(Auth::user()->chat_role < 3)
-        Вам недоступна эта информация
+        This information is not available to you
     @else
     <div class="kt-portlet">
         <div class="kt-portlet__body kt-portlet__body--fit">
@@ -173,17 +173,17 @@
                         <div class="alert alert-dark fade show mt-3" role="alert">
                             <div class="alert-icon"><i class="flaticon-questions-circular-button"></i></div>
                             <div class="alert-text">
-                                <p><strong>Подкрутка</strong><br>
-                                <span>Шансы на поражение (подмена выигрыша на проигрыш системой) зависят от баланса аккаунта пользователя.<br></span></p>
-                                <p><strong>Базовый шанс</strong><br>
-                                <span>Стандартный шанс на поражение.</span></p>
-                                <p><strong>Максимальный шанс</strong><br>
-                                <span>Шанс на поражение не сможет превысить это значение.</span></p>
-                                <p><strong>Максимальный коэффициент</strong><br>
-                                <span>Автоматическое поражение, если человек достигнет указаного значения коэффициента.</span></p>
-                                <p><strong>Скорость</strong><br>
-                                <span>Фактор, при котором алгоритм будет увеличивать шансы на проигрыш.<br>Чем он ниже, тем шанс на проигрыш для определенного порога баланса ниже.</span></p>
-                                <p>Все игры, использующие такую систему поддерживают предварительный просмотр.</p>
+                                <p><strong>Twist</strong><br>
+                                 <span>The chances of losing (replacing a win with a loss by the system) depend on the balance of the user’s account.<br></span></p>
+                                 <p><strong>Base chance</strong><br>
+                                 <span>Standard chance of defeat.</span></p>
+                                 <p><strong>Maximum chance</strong><br>
+                                 <span>The chance of defeat cannot exceed this value.</span></p>
+                                 <p><strong>Maximum coefficient</strong><br>
+                                 <span>Automatic defeat if a person reaches the specified coefficient value.</span></p>
+                                 <p><strong>Speed</strong><br>
+                                 <span>The factor at which the algorithm will increase the chances of losing.<br>The lower it is, the lower the chance of losing for a certain balance threshold.</span></p>
+                                 <p>All games using this system support preview.</p>
                             </div>
                         </div>
                     </div>
@@ -201,9 +201,9 @@
 
                     return <<< HTML
                         <div class="form-group">
-                            <label>Базовый шанс</label>
+                            <label>Base chance</label>
                             <div class="input-group">
-                                <input id="$gameId-base" oninput="$sendFunc" value="$base" type="text" class="form-control" placeholder="Базовый шанс" aria-describedby="basic-addon2">
+                                <input id="$gameId-base" oninput="$sendFunc" value="$base" type="text" class="form-control" placeholder="Base chance" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon2">
                                         <i class="flaticon2-percentage"></i>
@@ -212,9 +212,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Максимальный шанс</label>
+                            <label>Maximum chance</label>
                             <div class="input-group">
-                                <input id="$gameId-max" oninput="$sendFunc" value="$max" type="text" class="form-control" placeholder="Максимальный шанс" aria-describedby="basic-addon2">
+                                <input id="$gameId-max" oninput="$sendFunc" value="$max" type="text" class="form-control" placeholder="Maximum chance" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon2">
                                         <i class="flaticon2-percentage"></i>
@@ -223,15 +223,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Скорость</label>
+                            <label>Speed</label>
                             <div class="input-group" id="i1">
-                                <input id="$gameId-speed" oninput="$sendFunc" value="$speed" type="text" class="form-control" placeholder="Скорость" aria-describedby="basic-addon2">
+                                <input id="$gameId-speed" oninput="$sendFunc" value="$speed" type="text" class="form-control" placeholder="Speed" aria-describedby="basic-addon2">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Максимальный коэффициент</label>
+                            <label>Maximum coefficient</label>
                             <div class="input-group">
-                                <input id="$gameId-maxMul" oninput="$sendFunc" value="$mm" type="text" class="form-control" placeholder="Максимальный коэффициент" aria-describedby="basic-addon2">
+                                <input id="$gameId-maxMul" oninput="$sendFunc" value="$mm" type="text" class="form-control" placeholder="Maximum coefficient" aria-describedby="basic-addon2">
                             </div>
                         </div>
 
@@ -256,10 +256,10 @@ HTML;
                             <div class="kt-form__section kt-form__section--first">
                                 <div class="kt-wizard-v2__form">
                                     <div class="form-group">
-                                        <label>Вероятность <strong>проиграть</strong> с коэффициентом 1.01 - 1.50</label>
+                                        <label>Probability<strong>of</strong>losing> с коэффициентом 1.01 - 1.50</label>
                                         <div class="input-group" id="i3">
                                             <input oninput="delayedv('#i3 input', function(v) { send('#i3', '/admin/probability/crash_s/'+v) })"
-                                                   value="{{$settings->crash_s}}" type="text" class="form-control" placeholder="Вероятность" aria-describedby="basic-addon2">
+                                                   value="{{$settings->crash_s}}" type="text" class="form-control" placeholder="Probability"aria-describedby="basic-addon2">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">
                                                     <i class="flaticon2-percentage"></i>
@@ -268,10 +268,10 @@ HTML;
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Вероятность <strong>проиграть</strong> с коэффициентом 1.51 - 2.50</label>
+                                        <label>Probability<strong>of</strong>losing> с коэффициентом 1.51 - 2.50</label>
                                         <div class="input-group" id="i4">
                                             <input oninput="delayedv('#i4 input', function(v) { send('#i4', '/admin/probability/crash_m/'+v) })"
-                                                   value="{{$settings->crash_m}}" type="text" class="form-control" placeholder="Вероятность" aria-describedby="basic-addon2">
+                                                   value="{{$settings->crash_m}}" type="text" class="form-control" placeholder="Probability"aria-describedby="basic-addon2">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">
                                                     <i class="flaticon2-percentage"></i>
@@ -280,10 +280,10 @@ HTML;
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Вероятность <strong>проиграть</strong> с коэффициентом 2.51 - 4.00</label>
+                                        <label>Probability<strong>of</strong>losing> с коэффициентом 2.51 - 4.00</label>
                                         <div class="input-group" id="i5">
                                             <input oninput="delayedv('#i5 input', function(v) { send('#i5', '/admin/probability/crash_b/'+v) })"
-                                                   value="{{$settings->crash_b}}" type="text" class="form-control" placeholder="Вероятность" aria-describedby="basic-addon2">
+                                                   value="{{$settings->crash_b}}" type="text" class="form-control" placeholder="Probability"aria-describedby="basic-addon2">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">
                                                     <i class="flaticon2-percentage"></i>
@@ -292,10 +292,10 @@ HTML;
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Вероятность <strong>проиграть</strong> с коэффициентом 4.01 - 10.00</label>
+                                        <label>Probability<strong>of</strong>losing> с коэффициентом 4.01 - 10.00</label>
                                         <div class="input-group" id="ii6">
                                             <input oninput="delayedv('#ii6 input', function(v) { send('#ii6', '/admin/probability/crash_h/'+v) })"
-                                                   value="{{$settings->crash_h}}" type="text" class="form-control" placeholder="Вероятность" aria-describedby="basic-addon2">
+                                                   value="{{$settings->crash_h}}" type="text" class="form-control" placeholder="Probability"aria-describedby="basic-addon2">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">
                                                     <i class="flaticon2-percentage"></i>
@@ -335,10 +335,10 @@ HTML;
                             <div class="kt-form__section kt-form__section--first">
                                 <div class="kt-wizard-v2__form">
                                     <div class="form-group">
-                                        <label>Вероятность <strong>проиграть</strong> x36</label>
+                                        <label>Probability<strong>of</strong>losing> x36</label>
                                         <div class="input-group" id="r">
                                             <input oninput="delayedv('#r input', function(v) { send('#r', '/admin/probability/roulette/'+v) })"
-                                                   value="{{$settings->roulette}}" type="text" class="form-control" placeholder="Вероятность" aria-describedby="basic-addon2">
+                                                   value="{{$settings->roulette}}" type="text" class="form-control" placeholder="Probability"aria-describedby="basic-addon2">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">
                                                     <i class="flaticon2-percentage"></i>
@@ -347,10 +347,10 @@ HTML;
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Вероятность <strong>проиграть</strong> x3</label>
+                                        <label>Probability<strong>of</strong>losing> x3</label>
                                         <div class="input-group" id="r1">
                                             <input oninput="delayedv('#r1 input', function(v) { send('#r1', '/admin/probability/roulette_3/'+v) })"
-                                                   value="{{$settings->roulette_3}}" type="text" class="form-control" placeholder="Вероятность" aria-describedby="basic-addon2">
+                                                   value="{{$settings->roulette_3}}" type="text" class="form-control" placeholder="Probability"aria-describedby="basic-addon2">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">
                                                     <i class="flaticon2-percentage"></i>
@@ -359,10 +359,10 @@ HTML;
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Вероятность <strong>проиграть</strong> x2</label>
+                                        <label>Probability<strong>of</strong>losing> x2</label>
                                         <div class="input-group" id="r2">
                                             <input oninput="delayedv('#r2 input', function(v) { send('#r2', '/admin/probability/roulette_2/'+v) })"
-                                                   value="{{$settings->roulette_2}}" type="text" class="form-control" placeholder="Вероятность" aria-describedby="basic-addon2">
+                                                   value="{{$settings->roulette_2}}" type="text" class="form-control" placeholder="Probability"aria-describedby="basic-addon2">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">
                                                     <i class="flaticon2-percentage"></i>

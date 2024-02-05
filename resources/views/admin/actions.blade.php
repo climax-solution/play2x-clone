@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Журнал действий</div>
+<div id="__ajax_title" style="display: none">Action log</div>
 
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <div class="kt-grid kt-grid--desktop kt-grid--ver-desktop  kt-inbox" id="kt_inbox">
@@ -7,7 +7,7 @@
                 <div class="kt-inbox__toolbar kt-inbox__toolbar--extended">
                     <div class="kt-inbox__actions kt-inbox__actions--expanded">
                         <div class="kt-inbox__panel">
-                            <button class="kt-inbox__icon" data-toggle="kt-tooltip" title="" data-original-title="Очистить" onclick="send('#e', '/admin/action/clear', function() {window.location.reload()})">
+                            <button class="kt-inbox__icon" data-toggle="kt-tooltip" title="" data-original-title="Clear" onclick="send('#e', '/admin/action/clear', function() {window.location.reload()})">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                         <rect x="0" y="0" width="24" height="24"></rect>
@@ -27,62 +27,62 @@
                             $user = \App\User::where('id', $message['id'])->first();
                             if(isset($message['data']['id'])) $data_user = \App\User::where('id', $message['data']['id'])->first();
 
-                            $type = 'Неизвестно';
+                            $type = 'Unknown';
                             $description = '';
 
                             if($message['type'] == 1) {
-                                $type = 'Создание промокода';
-                                $description = $message['data']['code']. ', '.$message['data']['usages'].' использований, '.$message['data']['sum'].' rub.';
+                                $type = 'Creating a promotional code';
+                                $description = $message['data']['code']. ', '.$message['data']['usages'].' uses, '.$message['data']['sum'].' rub.';
                             }
 
                             if($message['type'] == 2) {
-                                $type = 'Удаление промокода';
+                                $type = 'Removing a promotional code';
                                 $description = $message['data']['code'];
                             }
 
                             if($message['type'] == 3) {
-                                $type = 'Изменение промокода';
-                                $description = $message['data']['code']. ', '.$message['data']['usages'].' использований, '.$message['data']['sum'].' rub.
-                                    <br>Было: '.$message['data']['prev']['usages'].' использований, '.$message['data']['prev']['sum'].' rub';
+                                $type = 'Change promotional code';
+                                $description = $message['data']['code']. ', '.$message['data']['usages'].' uses, '.$message['data']['sum'].' rub.
+                                    <br>Было: '.$message['data']['prev']['usages'].' uses, '.$message['data']['prev']['sum'].' rub';
                             }
 
                             if($message['type'] == 4) {
-                                $type = 'Блокировка чата';
+                                $type = 'Chat blocking';
                                 $description = $data_user->username.' (id: '.$data_user->id.')';
                             }
 
                             if($message['type'] == 5) {
-                                $type = ($message['data']['type'] === 'ban' ? 'Блокировка' : 'Разблокировка').' доступа к сайту';
+                                $type = ($message['data']['type'] === 'ban' ? 'Lock' : 'Unlock').' access to the site';
                                 $description = $data_user->username.' (id: '.$data_user->id.')';
                             }
 
                             if($message['type'] == 6) {
-                                $type = 'Временная блокировка чата';
-                                $description = $data_user->username.' (id: '.$data_user->id.') - '.$message['data']['minutes'].' мин.';
+                                $type = 'Temporary chat blocking';
+                                $description = $data_user->username.' (id: '.$data_user->id.') - '.$message['data']['minutes'].' min.';
                             }
 
                             if($message['type'] == 7) {
-                                $type = 'Создание группы временных промокодов';
-                                $description = $message['data']['num'] . ' шт.';
+                                $type = 'Creating a group of temporary promotional codes';
+                                $description = $message['data']['num'] . ' PC.';
                             }
 
                             if($message['type'] == 8) {
-                                $type = 'Изменение уровня доступа';
-                                $description = $data_user->username.' (было: '.$message['data']['old'].', стало: '.$message['data']['new'].')';
+                                $type = 'Change access level';
+                                $description = $data_user->username.' (was: '.$message['data']['old'].', became: '.$message['data']['new'].')';
                             }
 							
 							if($message['type'] == 11) {
-                                $type = 'Создание группы фейков';
-                                $description = $message['data']['num'] . ' аккаунт.';
+                                $type = 'Creating a group of fakes';
+                                $description = $message['data']['num'] . ' account.';
                             }
 
                             if($message['type'] == 12) {
-                                $type = 'Создание фейк аккаунта';
-                                $description = $message['data']['code']. '&nbsp '.$message['data']['sum'].' уровень.';
+                                $type = 'Creating a fake account';
+                                $description = $message['data']['code']. '&nbsp '.$message['data']['sum'].' level.';
                             }
 
-                            if($message['type'] == 9) $type = 'Техническое обслуживание';
-                            if($message['type'] == 10) $type = 'Окончание технического обслуживания';
+                            if($message['type'] == 9) $type = 'Maintenance';
+                            if($message['type'] == 10) $type = 'End of maintenance';
 
                             $date = new \DateTime('now', new \DateTimeZone('Etc/GMT-3'));
                             $date->setTimestamp($message['time']);

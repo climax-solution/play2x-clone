@@ -1,5 +1,5 @@
 <div>
-    <div id="__info_title" style="display: none">Задания</div>
+    <div id="__info_title" style="display: none">Tasks</div>
 
     <div class="info-container">
         <div class="info-block">

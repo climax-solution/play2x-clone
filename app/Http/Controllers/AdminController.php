@@ -1325,11 +1325,11 @@ public function randomName() {
         $user->save();
 
         $name = array(
-            0 => "Пользователь",
+            0 => "User",
             1 => "YouTube",
-            2 => "Модератор",
-            3 => "Администратор",
-			4 => "Фейк"
+            2 => "Moderator",
+            3 => "Administrator",
+			4 => "Fake"
         );
         self::log(8, array('id' => $id, 'old' => $name[$old], 'new' => $name[$rank_id]));
         return '1';

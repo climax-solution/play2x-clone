@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Статистика</div>
+<div id="__ajax_title" style="display: none">Statistics</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     @if(Auth::user()->chat_role < 3)
 		<style>
@@ -8,7 +8,7 @@
       p { text-indent:30px; } /*задаем размер отступа для первой строки абзаца*/
     </style>
       <div class="kt-portlet__head-title h7">
-                                  Вам недоступна эта информация
+                                  This information is not available to you
                             </div>
 							<script> window.location.replace("/admin/promo"); </script>
     @else
@@ -18,7 +18,7 @@
                     <div class="kt-portlet__head kt-portlet__head--noborder kt-portlet__space-x">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
-                                Заработано
+                                Earned
                             </h3>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
 
                                     $days = ''; $values = '';
                                     for($i = 0; $i < 9; $i++) {
-                                        $text = $i == 8 ? 'Сегодня' : (8 - $i) .' д. назад';
+                                        $text = $i == 8 ? 'Today' : (8 - $i) .' д. назад';
                                         echo "_pay_stats_days.push('$text');";
                                         echo "_pay_stats_values.push(".$wrap(\DB::table('payments')
                                             ->where('time', '>=', \Carbon\Carbon::now(new DateTimeZone("Etc/GMT-3"))->subDays((8-$i)+1)->timestamp)
@@ -60,7 +60,7 @@
                                             {{$wrap($today)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
-                                            Сегодня
+                                            Today
                                         </span>
                                     </div>
                                     <div class="kt-widget17__item">
@@ -68,7 +68,7 @@
                                             {{$wrap($week)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
-                                            Неделя
+                                            A week
                                         </span>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                                             {{$wrap($month)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
-                                            Месяц
+                                            Month
                                         </span>
                                     </div>
                                     <div class="kt-widget17__item">
@@ -86,7 +86,7 @@
                                             {{$wrap($summary)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
-                                            Все время
+                                            All the time
                                         </span>
                                     </div>
                                 </div>
@@ -100,19 +100,19 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
-                                Счет
+                                Check
                             </h3>
                         </div>
                         <div class="kt-portlet__head-toolbar">
                             <ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-brand" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#kt_widget4_tab1_content" role="tab">
-                                        Выплаты
+                                        Payments
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#kt_widget4_tab2_content" role="tab">
-                                        Пополнения
+                                        Top up
                                     </a>
                                 </li>
                             </ul>
@@ -129,7 +129,7 @@
                                     @if(sizeof($opens) == 0)
                                         <div class="empty_block">
                                             <i class="fas fa-clock"></i>
-                                            <div>Здесь ничего нет</div>
+                                            <div>There's nothing here</div>
                                         </div>
                                     @else
                                         @foreach($opens as $live)
@@ -154,14 +154,14 @@
 															$s = 'Qiwi' 
 															@endphp
                                                         @elseif($live->system == 5)
-                                                            Яндекс.Деньги
+                                                            Yandex money
                                                             @php
-															$s = 'Яндекс.Деньги'
+															$s = 'Yandex money'
 															@endphp
                                                         @elseif($live->system == 6)
-                                                            Мегафон
+                                                            Megaphone
                                                             @php
-															$s = 'Мегафон'
+															$s = 'Megaphone'
 															@endphp
                                                         @elseif($live->system == 7)
                                                             Tele2
@@ -174,9 +174,9 @@
 															$s = 'МТС'
 															@endphp
                                                         @elseif($live->system == 9)
-                                                            Билайн
+                                                            Beeline
                                                             @php
-															$s = 'Билайн'
+															$s = 'Beeline'
 															@endphp
                                                         @endif
                                                         {{$live->wallet}}
@@ -194,19 +194,19 @@
                                                             <li class="kt-nav__item">
                                                                 <a href="javascript:void(0)" onclick="send('#with_{{$live->id}}', '/admin/accept_withdraw/{{$live->id}}', function() { $('#with_{{$live->id}}').fadeOut('fast'); {{$message_send_script}} })" class="kt-nav__link">
                                                                     <i class="kt-nav__link-icon flaticon2-check-mark"></i>
-                                                                    <span class="kt-nav__link-text">Выплатить</span>
+                                                                    <span class="kt-nav__link-text">Pay out</span>
                                                                 </a>
                                                             </li>
                                                             <li class="kt-nav__item">
                                                                 <a href="javascript:void(0)" onclick="send('#with_{{$live->id}}', '/admin/decline_withdraw/{{$live->id}}', function() { $('#with_{{$live->id}}').fadeOut('fast'); })" class="kt-nav__link">
                                                                     <i class="kt-nav__link-icon flaticon2-cross"></i>
-                                                                    <span class="kt-nav__link-text">Отказать</span>
+                                                                    <span class="kt-nav__link-text">Refuse</span>
                                                                 </a>
                                                             </li>
                                                             <li class="kt-nav__item">
                                                                 <a href="javascript:void(0)" onclick="send('#with_{{$live->id}}', '/admin/ignore_withdraw/{{$live->id}}', function() { $('#with_{{$live->id}}').fadeOut('fast'); })" class="kt-nav__link">
                                                                     <i class="kt-nav__link-icon flaticon-delete"></i>
-                                                                    <span class="kt-nav__link-text">Игнорировать</span>
+                                                                    <span class="kt-nav__link-text">Ignore</span>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -226,7 +226,7 @@
                                     @if(sizeof($opens) == 0)
                                         <div class="empty_block">
                                             <i class="fas fa-clock"></i>
-                                            <div>Здесь ничего нет</div>
+                                            <div>There's nothing here</div>
                                         </div>
                                     @endif
                                     @foreach($opens as $live)
@@ -264,7 +264,7 @@
         9 => array("name" => "Tower", "color" => "#8e44ad"),
         10 => array("name" => "Roulette", "color" => "#aa88ff"),
         11 => array("name" => "Stairs", "color" => "#88aaff"),
-        12 => array("name" => "Кейсы", "color" => "#ee88ff"),
+        12 => array("name" => "Cases", "color" => "#ee88ff"),
 		13 => array("name" => "Plinko", "color" => "#32d0d0"),
         14 => array("name" => "Keno", "color" => "#daa421")
     );
@@ -274,7 +274,7 @@
                             <div class="kt-widget14">
                                 <div class="kt-widget14__header">
                                     <h3 class="kt-widget14__title">
-                                        Популярность игр
+                                        Game popularity
                                         <script type="text/javascript">
                                             var __popularity_data = [
                                                 @foreach($games as $id => $name)
@@ -320,12 +320,12 @@
                 <div class="kt-portlet">
                     <div class="kt-portlet__head kt-portlet__head--right kt-portlet__head--noborder  kt-ribbon kt-ribbon--clip kt-ribbon--left kt-ribbon--danger">
                         <div class="kt-ribbon__target" style="top: 12px;">
-                            <span class="kt-ribbon__inner"></span>Техническое обслуживание
+                            <span class="kt-ribbon__inner"></span>Maintenance
                         </div>
                     </div>
                     <div class="kt-portlet__body kt-portlet__body--fit-top">
                         <div class="kt-space-5"></div>
-                        Отключение сайта во время обновления, избежания конфликтных ситуаций или если что-то пойдет не так.
+                        Disabling the site during an update, to avoid conflict situations or if something goes wrong.
                         <div class="kt-space-15"></div>
                         <div class="kt-section">
                             <div class="kt-section__content kt-section__content--border kt-section__content--fit">
@@ -337,14 +337,14 @@
                                         <a href="javascript:void(0)" class="kt-nav__link"
                                             onclick="send('#maintenance', '/admin/setting/techworks/0', function() { $('#m_normal').addClass('kt-nav__item--active'); $('#m_m').removeClass('kt-nav__item--active'); })">
                                             <i class="kt-nav__link-icon flaticon2-layers-1"></i>
-                                            <span class="kt-nav__link-text">Сайт функционирует в штатном режиме</span>
+                                            <span class="kt-nav__link-text">The site is functioning normally</span>
                                         </a>
                                     </li>
                                     <li id="m_m" class="kt-nav__item @if($maintenanceActive) kt-nav__item--active @endif">
                                         <a href="javascript:void(0)" class="kt-nav__link"
                                             onclick="send('#maintenance', '/admin/setting/techworks/1', function() { $('#m_m').addClass('kt-nav__item--active'); $('#m_normal').removeClass('kt-nav__item--active'); })">
                                             <i class="kt-nav__link-icon flaticon2-list-3"></i>
-                                            <span class="kt-nav__link-text">Техническое обслуживание сайта</span>
+                                            <span class="kt-nav__link-text">Site Maintenance</span>
                                         </a>
                                     </li>
                                 </ul>

@@ -9,9 +9,9 @@
                             <th class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--sort">
                                 <span style="width: 50px">#</span>
                             </th>
-                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 200px;">Cумма и статус</span></th>
-                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 181px;">Кошелёк</span></th>
-                            <th data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 80px;">Действия</span></th>
+                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 200px;">Amount and status</span></th>
+                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 181px;">Wallet</span></th>
+                            <th data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 80px;">Actions</span></th>
                         </tr>
                     </thead>
                     <tbody class="kt-datatable__body" id="users"></tbody>

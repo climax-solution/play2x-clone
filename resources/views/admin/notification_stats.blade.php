@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Статистика - Браузерные уведомления</div>
+<div id="__ajax_title" style="display: none">Statistics - Браузерные уведомления</div>
 
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <div class="kt-portlet">
@@ -9,10 +9,10 @@
                         <div class="kt-widget24__details">
                             <div class="kt-widget24__info">
                                 <h4 class="kt-widget24__title">
-                                    Подписано
+                                Signed
                                 </h4>
                                 <span class="kt-widget24__desc">
-					            Общее количество
+					            Total
 					        </span>
                             </div>
 

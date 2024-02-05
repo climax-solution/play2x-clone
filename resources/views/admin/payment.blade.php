@@ -6,10 +6,10 @@
     if($payment == null) die();
 	 if($user == null) die();
 @endphp
-<div id="__ajax_title" style="display: none">Вывод # {{$payment->id}}</div>
+<div id="__ajax_title" style="display: none">Conclusion # {{$payment->id}}</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     @if(Auth::user()->chat_role < 3)
-        Вам недоступна эта информация
+        This information is not available to you
     @else
     <div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
         <button class="kt-app__aside-close" id="kt_user_profile_aside_close">
@@ -21,7 +21,7 @@
                     <div class="kt-portlet">
                         <div class="kt-portlet__head">
                             <div class="kt-portlet__head-label">
-                                <h3 class="kt-portlet__head-title">Операция # {{$payment->id}}</h3>
+                                <h3 class="kt-portlet__head-title">Operation # {{$payment->id}}</h3>
                             </div>
                         </div>
                         <div class="kt-form kt-form--label-right">
@@ -31,11 +31,11 @@
                                         <div class="row">
                                             <label class="col-xl-3"></label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <h3 class="kt-section__title kt-section__title-sm">Информация:</h3>
+                                                <h3 class="kt-section__title kt-section__title-sm">Information:</h3>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Пользователь</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">User</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="input-group" id="nick_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
@@ -53,19 +53,19 @@
                                             </div>
                                         </div>
 										<div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Дата пополнения</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Refill date</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="input-group" id="nick_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
-                                                    <input type="text" disabled class="form-control" value="{{$payment->created_at}}" placeholder="Дата пополнения" aria-describedby="basic-addon1">
+                                                    <input type="text" disabled class="form-control" value="{{$payment->created_at}}" placeholder="Refill date" aria-describedby="basic-addon1">
                                                 </div>
                                             </div>
                                         </div>
 										<div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Платёжная система</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Payment system</label>
                                             <div class="col-lg-9 col-xl-6">
 											@php
-                                        $pay = $payment->type == 180 ? "EXMO" : ($payment->type == 64 ? "PerfectMoney" : ($payment->type == 165 ? "Zcash" : ($payment->type == 150 ? "Advcash" : ($payment->type == 114 ? "PAYEER" : ($payment->type == 132 ? "Tele2" : ($payment->type == 83 ? "Билайн" : ($payment->type == 84 ? "МТС" : ($payment->type == 82 ? "Мегафон" : ($payment->type == 160 ? "Банк.карта" : ($payment->type == 45 ? "Яндекс.Деньги" : "Qiwi"))))))))));
+                                        $pay = $payment->type == 180 ? "EXMO" : ($payment->type == 64 ? "PerfectMoney" : ($payment->type == 165 ? "Zcash" : ($payment->type == 150 ? "Advcash" : ($payment->type == 114 ? "PAYEER" : ($payment->type == 132 ? "Tele2" : ($payment->type == 83 ? "Beeline" : ($payment->type == 84 ? "МТС" : ($payment->type == 82 ? "Megaphone" : ($payment->type == 160 ? "Банк.карта" : ($payment->type == 45 ? "Yandex money" : "Qiwi"))))))))));
                                     @endphp
                                                 <div class="input-group" id="pay_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-envelope"></i></span></div>
@@ -76,7 +76,7 @@
 										<div class="row">
                                             <label class="col-xl-3"></label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <h3 class="kt-section__title kt-section__title-sm">Статус:</h3>
+                                                <h3 class="kt-section__title kt-section__title-sm">Status:</h3>
                                             </div>
                                         </div>
 										                                        <div class="form-group row">
@@ -89,21 +89,21 @@
                                                                 <a href="javascript:void(0)" class="kt-nav__link"
                                                                    onclick="send('#chat_rightss', '/admin/change_status_payment/{{$payment->id}}/0', function() { $('*[data-chat-selection]').removeClass('kt-nav__item--active'); $('#a_u').addClass('kt-nav__item--active'); })">
                                                                     <i class="kt-nav__link-icon fal fa-user"></i>
-                                                                    <span class="kt-nav__link-text">Ожидание</span>
+                                                                    <span class="kt-nav__link-text">Expectation</span>
                                                                 </a>
                                                             </li>
                                                             <li data-chat-selection="true" id="a_y" class="kt-nav__item @if($payment->status == 1) kt-nav__item--active @endif">
                                                                 <a href="javascript:void(0)" class="kt-nav__link" style="font-family: 'Open Sans', sans-serif"
                                                                    onclick="send('#chat_rightss', '/admin/change_status_payment/{{$payment->id}}/1', function() { $('*[data-chat-selection]').removeClass('kt-nav__item--active'); $('#a_y').addClass('kt-nav__item--active'); })">
                                                                     <i class="kt-nav__link-icon fal fa-play"></i>
-                                                                    <span class="kt-nav__link-text">Успешно</span>
+                                                                    <span class="kt-nav__link-text">Successfully</span>
                                                                 </a>
                                                             </li>
 															<li data-chat-selection="true" id="a_f" class="kt-nav__item @if($payment->status == 2) kt-nav__item--active @endif">
                                                                 <a href="javascript:void(0)" class="kt-nav__link"
                                                                    onclick="send('#chat_rightss', '/admin/change_status_payment/{{$payment->id}}/2', function() { $('*[data-chat-selection]').removeClass('kt-nav__item--active'); $('#a_f').addClass('kt-nav__item--active');})">
                                                                     <i class="kt-nav__link-icon fal fa-cog"></i>
-                                                                    <span class="kt-nav__link-text">Ошибка</span>
+                                                                    <span class="kt-nav__link-text">Error</span>
                                                                 </a>
                                                             </li>
                                                         </ul>

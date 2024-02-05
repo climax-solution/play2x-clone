@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Статистика - Игры</div>
+<div id="__ajax_title" style="display: none">Statistics - Games</div>
 <script src="{{ asset('/admin_assets/js/pages/game_s.js') }}" type="text/javascript"></script>
 
 @php
@@ -14,7 +14,7 @@
         9 => array("name" => "Tower", "color" => "#8e44ad"),
         10 => array("name" => "Roulette", "color" => "#aa88ff"),
         11 => array("name" => "Stairs", "color" => "#88aaff"),
-        12 => array("name" => "Кейсы", "color" => "#ee88ff"),
+        12 => array("name" => "Cases", "color" => "#ee88ff"),
 		13 => array("name" => "Plinko", "color" => "#32d0d0"),
         14 => array("name" => "Keno", "color" => "#daa421")
     );
@@ -23,7 +23,7 @@
 <script>var loadScript = null</script>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     @if(Auth::user()->chat_role < 3)
-        Вам недоступна эта информация
+        This information is not available to you
     @else
         <div class="kt-portlet">
             <div class="kt-portlet__body  kt-portlet__body--fit">
@@ -33,7 +33,7 @@
                             <div class="kt-widget14">
                                 <div class="kt-widget14__header kt-margin-b-30">
                                     <h3 class="kt-widget14__title">
-                                        Number of games за сегодня
+                                        Number of games for today
                                     </h3>
                                 </div>
                                 <div class="kt-widget14__chart" style="height:330px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
@@ -47,7 +47,7 @@
                             <div class="kt-widget14">
                                 <div class="kt-widget14__header">
                                     <h3 class="kt-widget14__title">
-                                        Популярность игр
+                                        Game popularity
                                         <script type="text/javascript">
                                             var __popularity_data = [
                                                 @foreach($games as $id => $name)
@@ -98,44 +98,44 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
-                                Все игры
+                                All games
                             </h3>
                         </div>
                         <div class="kt-portlet__head-toolbar">
                             <a href="javascript:void(0)" id="s-common" class="btn btn-label-brand btn-bold btn-sm dropdown-toggle" data-toggle="dropdown">
                                 @php($c = "$('#s-common').html($(this).html())")
-                                Сегодня
+                                Today
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-fit dropdown-menu-md">
                                 <ul class="kt-nav">
                                     <li class="kt-nav__item" onclick="swapGameData('game-common', -1, 'today'); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Сегодня</span>
+                                            <span class="kt-nav__link-text">Today</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-common', -1, 7); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Неделя</span>
+                                            <span class="kt-nav__link-text">A week</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-common', -1, 31); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Месяц</span>
+                                            <span class="kt-nav__link-text">Month</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-common', -1, 31 * 3); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">3 месяца</span>
+                                            <span class="kt-nav__link-text">3 months</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-common', -1, 31 * 6); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">6 месяцев</span>
+                                            <span class="kt-nav__link-text">6 months</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-common', -1, 31 * 12); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">1 год</span>
+                                            <span class="kt-nav__link-text">1 year</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -150,7 +150,7 @@
                                         <i class="fad fa-galaxy kt-font-danger"></i>
                                     </span>
                                     <a href="javascript:void(0)" class="kt-widget4__title">
-                                        Игр за этот период:
+                                        Games during this period:
                                     </a>
                                     <span class="kt-widget4__number kt-font-danger" id="game-common-count"></span>
                                 </div>
@@ -174,38 +174,38 @@
                         <div class="kt-portlet__head-toolbar">
                             <a href="javascript:void(0)" id="s-{{$game['name']}}" class="btn btn-label-brand btn-bold btn-sm dropdown-toggle" data-toggle="dropdown">
                                 @php($c = "$('#s-".$game['name']."').html($(this).html())")
-                                Сегодня
+                                Today
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-fit dropdown-menu-md">
                                 <ul class="kt-nav">
                                     <li class="kt-nav__item" onclick="swapGameData('game-{{$game['name']}}', {{ $id }}, 'today'); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Сегодня</span>
+                                            <span class="kt-nav__link-text">Today</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-{{$game['name']}}', {{ $id }}, 7); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Неделя</span>
+                                            <span class="kt-nav__link-text">A week</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-{{$game['name']}}', {{ $id }}, 31); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Месяц</span>
+                                            <span class="kt-nav__link-text">Month</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-{{$game['name']}}', {{ $id }}, 31 * 3); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">3 месяца</span>
+                                            <span class="kt-nav__link-text">3 months</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-{{$game['name']}}', {{ $id }}, 31 * 6); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">6 месяцев</span>
+                                            <span class="kt-nav__link-text">6 months</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapGameData('game-{{$game['name']}}', {{ $id }}, 31 * 12); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">1 год</span>
+                                            <span class="kt-nav__link-text">1 year</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -220,7 +220,7 @@
                                         <i class="{{ \App\Http\Controllers\GeneralController::getGameIcon($id) }} kt-font-danger"></i>
                                     </span>
                                     <a href="javascript:void(0)" class="kt-widget4__title">
-                                        Игр за этот период:
+                                        Games during this period:
                                     </a>
                                     <span class="kt-widget4__number kt-font-danger" id="game-{{$game['name']}}-count"></span>
                                 </div>
@@ -279,8 +279,8 @@ if (window.location.href.indexOf('load')==-1) {
 		loadGameData('game-Stairs', '#88aaff');
         swapGameData('game-Stairs', 11, 'today');
 		
-		loadGameData('game-Кейсы', '#ee88ff');
-        swapGameData('game-Кейсы', 12, 'today');
+		loadGameData('game-Cases', '#ee88ff');
+        swapGameData('game-Cases', 12, 'today');
 		
 		loadGameData('game-Keno', '#daa421');
         swapGameData('game-Keno', 14, 'today');

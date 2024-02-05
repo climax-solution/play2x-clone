@@ -302,7 +302,7 @@
                                             @if($d->status == 0)
                                                 Expectation
                                                 <br>
-                                                <a class="ll" onclick="cancelWithdraw({{$d->id}})" href="javascript:void(0)">Отменить</a>
+                                                <a class="ll" onclick="cancelWithdraw({{$d->id}})" href="javascript:void(0)">Cancel</a>
                                             @elseif($d->status == 1)
                                                 Successfully
                                             @elseif($d->status == 2)

@@ -5,7 +5,7 @@
     <base href="">
     <meta charset="utf-8" />
     <title>{{$settings->namesite}}</title>
-    <meta name="description" content="{{$settings->namesite}} - Администрирование">
+    <meta name="description" content="{{$settings->namesite}} - Administration">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
@@ -75,26 +75,26 @@
                                             <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
                                         </g></svg>
                                     </span>
-                                <span class="kt-menu__link-text">Статистика</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                <span class="kt-menu__link-text">Statistics</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                 <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                                     <ul class="kt-menu__subnav">
                                         <li class="kt-menu__item" data-option="admin/" onclick="location.href='/admin'" aria-haspopup="true">
-                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Главная</span></span>
+                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Home</span></span>
                                         </li>
                                         <li class="kt-menu__item" data-option="admin/game_stats" onclick="load('/admin/game_stats')" aria-haspopup="true">
-                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Игры</span></span>
+                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Games</span></span>
                                         </li>
                                         <li class="kt-menu__item" data-option="admin/user_stats" onclick="load('/admin/user_stats')" aria-haspopup="true">
-                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Пользователи</span></span>
+                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Users</span></span>
                                         </li>
                                         <li class="kt-menu__item" data-option="admin/notification_stats" onclick="location.href='/admin/notification_stats'">
-                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Уведомления</span></span>
+                                            <span class="kt-menu__link"><span class="kt-menu__link-text">Notifications</span></span>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="kt-menu__section ">
-                                <h4 class="kt-menu__section-text">Настройки</h4>
+                                <h4 class="kt-menu__section-text">Settings</h4>
                                 <i class="kt-menu__section-icon flaticon-more-v2"></i>
                             </li>
                             <li class="kt-menu__item" data-option="admin/settings" aria-haspopup="true"><a href="javascript:void(0)" onclick="location.href='/admin/settings'" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -102,7 +102,7 @@
                                     <rect x="0" y="0" width="24" height="24" />
                                     <path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000" />
                                     <path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3" /></g>
-                                </svg></span><span class="kt-menu__link-text">Настройки</span></a>
+                                </svg></span><span class="kt-menu__link-text">Settings</span></a>
                             </li>
                             <li class="kt-menu__item" data-option="admin/adjustments" aria-haspopup="true"><a href="javascript:void(0)" onclick="location.href='/admin/adjustments'" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -111,21 +111,21 @@
                                     <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5" />
                                     <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5" />
                                     <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5" />
-                                </g></svg></span><span class="kt-menu__link-text">Игры</span></a>
+                                </g></svg></span><span class="kt-menu__link-text">Games</span></a>
                             </li>
 							<li class="kt-menu__item" data-option="admin/cases" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="location.href='/admin/cases'" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
 							<i class="fad fa-box-open"></i>
-							</span><span class="kt-menu__link-text">Кейсы</span></a>
+							</span><span class="kt-menu__link-text">Cases</span></a>
                             </li>
 								@if($settings->techworks === 0)
 							<li class="kt-menu__item" data-option="admin/tasks" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="location.href='/admin/tasks'" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
 							<i class="fas fa-tasks"></i>
-							</span><span class="kt-menu__link-text">Задания</span></a>
+							</span><span class="kt-menu__link-text">Tasks</span></a>
                             </li>
 							@endif
                         @endif
                         <li class="kt-menu__section ">
-                            <h4 class="kt-menu__section-text">Управление</h4>
+                            <h4 class="kt-menu__section-text">Control</h4>
                             <i class="kt-menu__section-icon flaticon-more-v2"></i>
                         </li>
                         <li class="kt-menu__item" data-option="admin/promo" aria-haspopup="true"><a href="javascript:void(0)" onclick="location.href='/admin/promo'" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
@@ -135,7 +135,7 @@
                                     <path d="M16.0322024,5.68722152 L5.75790403,15.945742 C5.12139076,16.5812778 5.12059836,17.6124773 5.75613416,18.2489906 C5.75642891,18.2492858 5.75672377,18.2495809 5.75701875,18.2498759 L5.75701875,18.2498759 C6.39304347,18.8859006 7.42424328,18.8859006 8.060268,18.2498759 C8.06056298,18.2495809 8.06085784,18.2492858 8.0611526,18.2489906 L18.3196731,7.9746922 C18.9505124,7.34288268 18.9501191,6.31942463 18.3187946,5.68810005 L18.3187946,5.68810005 C17.68747,5.05677547 16.6640119,5.05638225 16.0322024,5.68722152 Z" fill="#000000" fill-rule="nonzero"/>
                                     <path d="M9.85714286,6.92857143 C9.85714286,8.54730513 8.5469533,9.85714286 6.93006028,9.85714286 C5.31316726,9.85714286 4,8.54730513 4,6.92857143 C4,5.30983773 5.31316726,4 6.93006028,4 C8.5469533,4 9.85714286,5.30983773 9.85714286,6.92857143 Z M20,17.0714286 C20,18.6901623 18.6898104,20 17.0729174,20 C15.4560244,20 14.1428571,18.6901623 14.1428571,17.0714286 C14.1428571,15.4497247 15.4560244,14.1428571 17.0729174,14.1428571 C18.6898104,14.1428571 20,15.4497247 20,17.0714286 Z" fill="#000000" opacity="0.3"/>
                                 </g>
-                            </svg></span><span class="kt-menu__link-text">Промокоды</span></a>
+                            </svg></span><span class="kt-menu__link-text">Promo codes</span></a>
                         </li>
                       <!--  <li class="kt-menu__item" data-option="admin/promo_list" aria-haspopup="true"><a href="javascript:void(0)" onclick="load('/admin/promo_list')" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -146,7 +146,7 @@
                                     <path d="M10.8543431,9.1753866 C10.8543431,10.1252593 10.085524,10.8938719 9.13585777,10.8938719 C8.18793881,10.8938719 7.41737243,10.1252593 7.41737243,9.1753866 C7.41737243,8.22551387 8.18793881,7.45690126 9.13585777,7.45690126 C10.085524,7.45690126 10.8543431,8.22551387 10.8543431,9.1753866" fill="#000000" opacity="0.3"/>
                                     <path d="M14.8641422,16.6221564 C13.9162233,16.6221564 13.1456569,15.8535438 13.1456569,14.9036711 C13.1456569,13.9520555 13.9162233,13.1851857 14.8641422,13.1851857 C15.8138085,13.1851857 16.5826276,13.9520555 16.5826276,14.9036711 C16.5826276,15.8535438 15.8138085,16.6221564 14.8641422,16.6221564 Z" fill="#000000" opacity="0.3"/>
                                 </g>
-                            </svg></span><span class="kt-menu__link-text">Промокоды - Бот</span></a>
+                            </svg></span><span class="kt-menu__link-text">Promo codes - Bot</span></a>
                         </li> --->
                         @if(Auth::user()->chat_role >= 3)
                             <li class="kt-menu__item" data-option="admin/users" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="load('/admin/users')" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -154,19 +154,19 @@
                                     <rect x="0" y="0" width="24" height="24" />
                                     <path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" fill="#000000" opacity="0.3" />
                                     <path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" fill="#000000" />
-                                </g></svg></span><span class="kt-menu__link-text">Пользователи</span></a>
+                                </g></svg></span><span class="kt-menu__link-text">Users</span></a>
                             </li>
 							<li class="kt-menu__item" data-option="admin/fakes" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="load('/admin/fakes')" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
 							<i class="icon-blackjack"></i>
-							</span><span class="kt-menu__link-text">Фейки</span></a>
+							</span><span class="kt-menu__link-text">Fakes</span></a>
                             </li>
 							<li class="kt-menu__item" data-option="admin/withdraws" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="load('/admin/withdraws')" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
 							<i class="fas fa-comments-dollar"></i>
-							</span><span class="kt-menu__link-text">Выплаты</span></a>
+							</span><span class="kt-menu__link-text">Payments</span></a>
                             </li>
 							<li class="kt-menu__item" data-option="admin/payments" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="load('/admin/payments')" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
 							<i class="fas fa-shopping-cart"></i>
-							</span><span class="kt-menu__link-text">Пополнения</span></a>
+							</span><span class="kt-menu__link-text">Top up</span></a>
                             </li>
                             <li class="kt-menu__item" data-option="admin/actions" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="location.href='/admin/actions'" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -174,7 +174,7 @@
                                         <polygon points="0 0 24 0 24 24 0 24"/>
                                         <path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000" fill-rule="nonzero"/>
                                     </g>
-                                </svg></span><span class="kt-menu__link-text">Журнал действий</span></a>
+                                </svg></span><span class="kt-menu__link-text">Action log</span></a>
                             </li>
                             <li class="kt-menu__item" data-option="admin/notifications" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:void(0)" onclick="location.href='/admin/notifications'" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
@@ -182,10 +182,10 @@
                                         <path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="#000000"/>
                                         <rect fill="#000000" opacity="0.3" x="10" y="16" width="4" height="4" rx="2"/>
                                     </g>
-                                </svg></span><span class="kt-menu__link-text">Уведомления</span></a>
+                                </svg></span><span class="kt-menu__link-text">Notifications</span></a>
                             </li>
                             <li class="kt-menu__section ">
-                                <h4 class="kt-menu__section-text">Сервер</h4>
+                                <h4 class="kt-menu__section-text">Server</h4>
                                 <i class="kt-menu__section-icon flaticon-more-v2"></i>
                             </li>
                             <li class="kt-menu__item" data-option="admin/logs" aria-haspopup="true"><a href="/admin/logs" target="_blank" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon">
@@ -195,7 +195,7 @@
                                     <path d="M4.5,21 L21.5,21 C22.3284271,21 23,20.3284271 23,19.5 L23,8.5 C23,7.67157288 22.3284271,7 21.5,7 L11,7 L8.43933983,4.43933983 C8.15803526,4.15803526 7.77650439,4 7.37867966,4 L4.5,4 C3.67157288,4 3,4.67157288 3,5.5 L3,19.5 C3,20.3284271 3.67157288,21 4.5,21 Z" fill="#000000" opacity="0.3"/>
                                     <path d="M2.5,19 L19.5,19 C20.3284271,19 21,18.3284271 21,17.5 L21,6.5 C21,5.67157288 20.3284271,5 19.5,5 L9,5 L6.43933983,2.43933983 C6.15803526,2.15803526 5.77650439,2 5.37867966,2 L2.5,2 C1.67157288,2 1,2.67157288 1,3.5 L1,17.5 C1,18.3284271 1.67157288,19 2.5,19 Z" fill="#000000"/>
                                 </g>
-                            </svg></span><span class="kt-menu__link-text">Логи</span>
+                            </svg></span><span class="kt-menu__link-text">Logs</span>
                                     <span class="kt-menu__link-badge bigger-badge">
                                  <span class="kt-badge kt-badge--danger kt-badge--inline">
                                        {{ App::make(\Arcanedev\LogViewer\Contracts\LogViewer::class)->total() }}
@@ -210,7 +210,7 @@
                                     <path d="M1,12 L1,14 L6,14 L6,12 L1,12 Z M0,10 L20,10 C20.5522847,10 21,10.4477153 21,11 L21,15 C21,15.5522847 20.5522847,16 20,16 L0,16 C-0.55228475,16 -1,15.5522847 -1,15 L-1,11 C-1,10.4477153 -0.55228475,10 0,10 Z" fill="#000000" fill-rule="nonzero" transform="translate(10.000000, 13.000000) rotate(-225.000000) translate(-10.000000, -13.000000) "/>
                                     <path d="M17.5,12 L18.5,12 C18.7761424,12 19,12.2238576 19,12.5 L19,13.5 C19,13.7761424 18.7761424,14 18.5,14 L17.5,14 C17.2238576,14 17,13.7761424 17,13.5 L17,12.5 C17,12.2238576 17.2238576,12 17.5,12 Z M20.5,9 L21.5,9 C21.7761424,9 22,9.22385763 22,9.5 L22,10.5 C22,10.7761424 21.7761424,11 21.5,11 L20.5,11 C20.2238576,11 20,10.7761424 20,10.5 L20,9.5 C20,9.22385763 20.2238576,9 20.5,9 Z M21.5,13 L22.5,13 C22.7761424,13 23,13.2238576 23,13.5 L23,14.5 C23,14.7761424 22.7761424,15 22.5,15 L21.5,15 C21.2238576,15 21,14.7761424 21,14.5 L21,13.5 C21,13.2238576 21.2238576,13 21.5,13 Z" fill="#000000" opacity="0.3"/>
                                 </g>
-                            </svg></span><span class="kt-menu__link-text">Сборка</span>
+                            </svg></span><span class="kt-menu__link-text">Assembly</span>
                                     <span class="kt-menu__link-badge bigger-badge">
                                  <span class="kt-badge kt-badge--brand kt-badge--inline">
                                     {{ json_decode(file_get_contents(base_path('package.json')))->version }}
@@ -263,7 +263,7 @@
 
                             <div class="kt-notification">
                                 <div class="kt-notification__custom kt-space-between">
-                                    <a onclick="location.href='/logout'" class="btn btn-label btn-label-brand btn-sm btn-bold">Выйти</a>
+                                    <a onclick="location.href='/logout'" class="btn btn-label btn-label-brand btn-sm btn-bold">Go out</a>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
     <div class="kt-quick-panel__nav">
         <ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-brand  kt-notification-item-padding-x" role="tablist">
             <li class="nav-item active">
-                <a class="nav-link active" data-toggle="tab" href="#kt_quick_panel_tab_settings" role="tab">Игры</a>
+                <a class="nav-link active" data-toggle="tab" href="#kt_quick_panel_tab_settings" role="tab">Games</a>
             </li>
         </ul>
     </div>
@@ -313,7 +313,7 @@
         <div class="tab-content">
             <div class="tab-pane kt-quick-panel__content-padding-x fade show active kt-scroll" id="kt_quick_panel_tab_settings" role="tabpanel">
                 <form class="kt-form">
-                    <div class="kt-heading kt-heading--sm kt-heading--space-sm">Включение/отключение игр</div>
+                    <div class="kt-heading kt-heading--sm kt-heading--space-sm">Enabling/Disabling games</div>
 
                     @php
                     $games = array(
@@ -327,7 +327,7 @@
                         "tower" => 'Tower',
                         "roulette" => 'Roulette',
                         "stairs" => 'Stairs',
-                        "cases" => 'Кейсы',
+                        "cases" => 'Cases',
                         "keno" => 'Keno',
 						"plinko" => 'Plinko'
                     );

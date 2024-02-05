@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Статистика - Пользователи</div>
+<div id="__ajax_title" style="display: none">Statistics - Users</div>
 <script src="{{ asset('/admin_assets/js/pages/user_s.js') }}" type="text/javascript"></script>
 
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
@@ -10,10 +10,10 @@
                         <div class="kt-widget24__details">
                             <div class="kt-widget24__info">
                                 <h4 class="kt-widget24__title">
-                                    Зарегистрировано
+                                    Registered
                                 </h4>
                                 <span class="kt-widget24__desc">
-					            Общее количество
+					            Total Amount
 					        </span>
                             </div>
 
@@ -33,10 +33,10 @@
                         <div class="kt-widget24__details">
                             <div class="kt-widget24__info">
                                 <h4 class="kt-widget24__title">
-                                    ВКонтакте
+                                    In contact with
                                 </h4>
                                 <span class="kt-widget24__desc">
-					            Зарегистрировано через <i class="fab fa-vk"></i>
+					            Registered via <i class="fab fa-vk"></i>
 					        </span>
                             </div>
 
@@ -55,10 +55,10 @@
                         <div class="kt-widget24__details">
                             <div class="kt-widget24__info">
                                 <h4 class="kt-widget24__title">
-                                    Почта
+                                    Mail
                                 </h4>
                                 <span class="kt-widget24__desc">
-                                    Зарегистрировано через <i class="fas fa-at"></i>
+                                    Registered via <i class="fas fa-at"></i>
                                 </span>
                             </div>
 
@@ -81,34 +81,34 @@
                 <div class="kt-portlet__head">
                     <div class="kt-portlet__head-label">
                         <h3 class="kt-portlet__head-title">
-                            Регистрации
+                            Registration
                         </h3>
                     </div>
                    <div class="kt-portlet__head-toolbar">@php ($c = "$('#s-total').html($(this).html())") @endphp
 <a href="javascript:void(0)" id="s-total" class="btn btn-label-brand btn-bold btn-sm dropdown-toggle" data-toggle="dropdown">
-                            Сегодня
+                            Today
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-fit dropdown-menu-md">
                             <ul class="kt-nav">
                                 <ul class="kt-nav">
                                     <li class="kt-nav__item" onclick="swapUserData('a', __a_data_today_labels, __a_data_today, __a_data_today_count); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Сегодня</span>
+                                            <span class="kt-nav__link-text">Today</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapUserData('a', __a_data_week_labels, __a_data_week, __a_data_week_count); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Неделя</span>
+                                            <span class="kt-nav__link-text">A week</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapUserData('a', __a_data_month_labels, __a_data_month, __a_data_month_count); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">Месяц</span>
+                                            <span class="kt-nav__link-text">Month</span>
                                         </a>
                                     </li>
                                     <li class="kt-nav__item" onclick="swapUserData('a', __a_data_3months_labels, __a_data_3months, __a_data_3months_count); {!! $c !!}">
                                         <a href="javascript:void(0)" class="kt-nav__link">
-                                            <span class="kt-nav__link-text">3 месяца</span>
+                                            <span class="kt-nav__link-text">3 months</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -124,7 +124,7 @@
                                 <i class=" kt-font-danger"></i>
                             </span>
                                 <a href="javascript:void(0)" class="kt-widget4__title">
-                                    Регистраций за этот период:
+                                    Registrations for this period:
                                 </a>
                                 <span class="kt-widget4__number kt-font-danger" id="a-count"></span>
                             </div>
@@ -165,13 +165,13 @@
                 $fill_labels = function($days) {
                     $out = '';
                     for($i = 0; $i < $days; $i++)
-                        $out .= '"'.($i > 0 ? $i .' д назад' : 'Сегодня').'",';
+                        $out .= '"'.($i > 0 ? $i .' d back' : 'Today').'",';
                     return $out;
                 };
             @endphp
 
             var __a_data_week_count = {{ \App\User::where('time', '>=', \Carbon\Carbon::today(new DateTimeZone("Etc/GMT-3"))->subDays(6)->timestamp)->where('chat_role', '<=', 3)->count() }};
-            var __a_data_week_labels = ['6 дней назад', '5 дней назад', '4 дня назад', '3 дня назад', '2 дня назад', 'Вчера', 'Сегодня'];
+            var __a_data_week_labels = ['6 days ago', '5 days ago', '4 ддня наза', '3 ддня наза', '2 ддня наза', 'Yesterday', 'Today'];
             var __a_data_week = [{!! $fill_days(7) !!}].reverse();
 
             var __a_data_month_count = {{ \App\User::where('time', '>=', \Carbon\Carbon::today(new DateTimeZone("Etc/GMT-3"))->subDays(29)->timestamp)->where('chat_role', '<=', 3)->count() }};

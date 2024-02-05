@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Фейки</div>
+<div id="__ajax_title" style="display: none">Fakes</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <div class="kt-portlet kt-portlet--mobile" id="users_container">
         <div class="kt-portlet__body kt-portlet__body--fit">
@@ -9,9 +9,9 @@
                             <th class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--sort">
                                 <span style="width: 50px">#</span>
                             </th>
-                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 200px;">Фейк</span></th>
+                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 200px;">Fake</span></th>
                             <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 181px;">Level</span></th>
-                            <th data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 80px;">Действия</span></th>
+                            <th data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 80px;">Actions</span></th>
                         </tr>
                     </thead>
                     <tbody class="kt-datatable__body" id="users"></tbody>
@@ -24,18 +24,18 @@
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Фейки</h5>
+                <h5 class="modal-title">Fakes</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="form-control-label">Количество фейков:</label>
-                    <input type="text" class="form-control" id="g_num" placeholder="От 1 до 50">
+                    <label class="form-control-label">Number of fakes:</label>
+                    <input type="text" class="form-control" id="g_num" placeholder="From 1 to 50">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="g_create">Создать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="g_create">Create</button>
             </div>
         </div>
     </div>
@@ -44,22 +44,22 @@
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Фейк</h5>
+                <h5 class="modal-title">Fake</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="form-control-label">Имя:</label>
-                    <input type="text" class="form-control" id="code" placeholder="Имя">
+                    <label class="form-control-label">Name:</label>
+                    <input type="text" class="form-control" id="code" placeholder="Name">
                 </div>
                 <div class="form-group">
                     <label class="form-control-label">Level:</label>
-                    <input type="text" class="form-control" id="sum" placeholder="От 1 до 10">
+                    <input type="text" class="form-control" id="sum" placeholder="From 1 to 10">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="create">Создать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="create">Create</button>
             </div>
         </div>
     </div>
@@ -68,20 +68,20 @@
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Настройки</h5>
+                <h5 class="modal-title">Settings</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
 			<div class="form-group">
                                 <label class="kt-checkbox">
                                     <input id="game_fake" @if($settings['game_fake'] == 1) checked @endif type="checkbox"
-                                        onclick="send('#game_fake', '/admin/setting/game_fake/'+($('#game_fake').is(':checked') ? '1' : '0'))"> Активность фейк ставок
+                                        onclick="send('#game_fake', '/admin/setting/game_fake/'+($('#game_fake').is(':checked') ? '1' : '0'))"> Fake betting activity
                                     <span></span>
                                 </label>
                             </div>
                 <div class="form-group">
-                    <label class="form-control-label">Интервал фейк игр (сек):</label>
-                    <input type="text" class="form-control" placeholder="Рекомендуемое от 5 до 250 сек" value="{{$settings->time_fake}}" id="f_edit_time">
+                    <label class="form-control-label">Interval of fake games (sec):</label>
+                    <input type="text" class="form-control" placeholder="Recommended 5 to 250 sec" value="{{$settings->time_fake}}" id="f_edit_time">
                 </div>
 											<div class="form-group">
                                 <label class="kt-checkbox">
@@ -91,43 +91,43 @@
                                 </label>
                             </div>
 				<div class="form-group">
-                    <label class="form-control-label">Интервал фейк чата (сек):</label>
-                    <input type="text" class="form-control" placeholder="Рекомендуемое от 5 до 250 сек" value="{{$settings->time_chat_fake}}" id="f_edit_time_chat">
+                    <label class="form-control-label">Fake chat interval (sec):</label>
+                    <input type="text" class="form-control" placeholder="Recommended 5 to 250 sec" value="{{$settings->time_chat_fake}}" id="f_edit_time_chat">
                 </div>
 				<div class="form-group">
                                 <label class="kt-checkbox">
                                     <input id="withdraw_fake" @if($settings['withdraw_fake'] == 1) checked @endif type="checkbox"
-                                        onclick="send('#withdraw_fake', '/admin/setting/withdraw_fake/'+($('#withdraw_fake').is(':checked') ? '1' : '0'))"> Активность фейк выводов
+                                        onclick="send('#withdraw_fake', '/admin/setting/withdraw_fake/'+($('#withdraw_fake').is(':checked') ? '1' : '0'))"> Fake withdrawal activity
                                     <span></span>
                                 </label>
                             </div>
 				<div class="form-group">
-                    <label class="form-control-label">Интервал фейк выводов (сек):</label>
-                    <input type="text" class="form-control" placeholder="Рекомендуемое от 35 до 450 сек" value="{{$settings->withdraw_time_fake}}" id="f_edit_time_withdraw">
+                    <label class="form-control-label">Fake output interval (sec):</label>
+                    <input type="text" class="form-control" placeholder="Recommended 35 to 450 sec" value="{{$settings->withdraw_time_fake}}" id="f_edit_time_withdraw">
                 </div>
 				<div class="form-group">
                                 <label class="kt-checkbox">
                                     <input id="live_fake" @if($settings['live_fake'] == 1) checked @endif type="checkbox"
-                                        onclick="send('#live_fake', '/admin/setting/live_fake/'+($('#live_fake').is(':checked') ? '1' : '0'))"> Активность фейк лайв-ленты
+                                        onclick="send('#live_fake', '/admin/setting/live_fake/'+($('#live_fake').is(':checked') ? '1' : '0'))"> Fake live feed activity
                                     <span></span>
                                 </label>
                             </div>
 							<div class="form-group">
-                    <label class="form-control-label">Фейк онлайн в играх (чел):</label>
-                    <input type="text" class="form-control" placeholder="Рекомендуемое от 25 до 250 человек" value="{{$settings->fakeonline_games}}" id="f_edit_fakeonline_games">
+                    <label class="form-control-label">Fake online in games (persons):</label>
+                    <input type="text" class="form-control" placeholder="Recommended from 25 to 250 people" value="{{$settings->fakeonline_games}}" id="f_edit_fakeonline_games">
                 </div>
 				<div class="form-group">
-                    <label class="form-control-label">Всего пользователей (чел):</label>
-                    <input type="text" class="form-control" placeholder="Рекомендуемое от 250 до 250000 человек" value="{{$settings->fakesumusers}}" id="f_edit_fakesumusers">
+                    <label class="form-control-label">Total users (persons):</label>
+                    <input type="text" class="form-control" placeholder="Recommended 250 to 250,000 people" value="{{$settings->fakesumusers}}" id="f_edit_fakesumusers">
                 </div>
 				<div class="form-group">
-                    <label class="form-control-label">Всего выведено (чел):</label>
-                    <input type="text" class="form-control" placeholder="Рекомендуемое от 10000 до 25000000 человек" value="{{$settings->fakesumwithdraw}}" id="f_edit_fakesumwithdraw">
+                    <label class="form-control-label">Total output (persons):</label>
+                    <input type="text" class="form-control" placeholder="Recommended from 10,000 to 25,000,000 people" value="{{$settings->fakesumwithdraw}}" id="f_edit_fakesumwithdraw">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="f_edit">Редактировать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="f_edit">Edit</button>
             </div>
         </div>
     </div>

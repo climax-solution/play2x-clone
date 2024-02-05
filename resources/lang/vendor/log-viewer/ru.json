@@ -5,9 +5,9 @@
     "Emergency": "Аварийная",
     "Alert": "Предупреждение",
     "Critical": "Критический",
-    "Error": "Ошибка",
+    "Error": "Error",
     "Warning": "Предупреждение",
     "Notice": "Уведомление",
-    "Info": "Информация",
+    "Info": "Information",
     "Debug": "Отладка"
 }

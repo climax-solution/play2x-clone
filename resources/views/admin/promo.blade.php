@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Промокоды</div>
+<div id="__ajax_title" style="display: none">Promo codes</div>
     @if(Auth::user()->chat_role < 3)
 		<style>
       h7 { text-align:center; }
@@ -7,9 +7,9 @@
       p { text-indent:30px; } /*задаем размер отступа для первой строки абзаца*/
     </style>
       <br><div class="kt-portlet__head-title h7">
-                                                       ⠀⠀⠀⠀⠀⠀⠀⠀Вы можете создать только одну временную группу и один промокод на 25 использований в день!
-                            </div>
-							<br><br>
+        You can create only one temporary group and one promotional code for 25 uses per day!
+        </div>
+        <br><br>
     @endif
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
@@ -31,13 +31,13 @@
                                             <a href="javascript:void(0)"
                                                onclick="$('#edit_id').val({{$promo->id}}); $('#edit_code').val('{{$promo->code}}'); $('#edit_usages').val('{{$promo->usages}}'); $('#edit_sum').val('{{$promo->sum}}');" data-toggle="modal" data-target="#pedit" class="kt-nav__link">
                                                 <i class="kt-nav__link-icon flaticon2-settings"></i>
-                                                <span class="kt-nav__link-text">Редактировать</span>
+                                                <span class="kt-nav__link-text">Edit</span>
                                             </a>
                                         </li>
                                         <li class="kt-nav__item">
                                             <a href="javascript:void(0)" onclick="send('#promo{{$promo->id}}', '/admin/promo/remove/{{$promo->id}}', function() { $('#promo{{$promo->id}}').fadeOut('fast') })" class="kt-nav__link">
                                                 <i class="kt-nav__link-icon flaticon2-trash"></i>
-                                                <span class="kt-nav__link-text">Удалить</span>
+                                                <span class="kt-nav__link-text">Delete</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -59,13 +59,13 @@
                                 <div class="kt-widget__body">
                                     <div class="kt-widget__item">
                                         <div class="kt-widget__contact">
-                                            <span class="kt-widget__label mt-2">Использований осталось:</span>
+                                            <span class="kt-widget__label mt-2">Uses left:</span>
                                             <a href="#" class="kt-widget__data">{{$promo->usages}}</a>
                                         </div>
                                     </div>
                                     <div class="kt-widget__item">
                                         <div class="kt-widget__contact">
-                                            <span class="kt-widget__label">Использовали:</span>
+                                            <span class="kt-widget__label">Used:</span>
                                             {{\App\User::whereRaw('JSON_CONTAINS(`gp_used`, \''.$promo->id.'\', \'$\')')->count()}}
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@
                         <div class="kt-portlet__head">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
-                                    Временные промокоды
+                                    Temporary promotional codes
                                 </h3>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                                                         {{$promo->code}}
                                                     </span>
                                                     <a class="kt-widget2__username" style="font-family: 'Open Sans'">
-                                                        Удалится:
+                                                        Will be deleted:
                                                         @php
                                                             $date = new \DateTime('now', new \DateTimeZone('Etc/GMT-3'));
                                                             $date->setTimestamp($promo->time + 86400);
@@ -131,13 +131,13 @@
                                                                 <a href="javascript:void(0)"
                                                                    onclick="$('#g_edit_id').val({{$promo->id}}); $('#g_edit_name').val('{{$promo->code}}');" data-toggle="modal" data-target="#gedit" class="kt-nav__link">
                                                                     <i class="kt-nav__link-icon flaticon2-settings"></i>
-                                                                    <span class="kt-nav__link-text">Редактировать</span>
+                                                                    <span class="kt-nav__link-text">Edit</span>
                                                                 </a>
                                                             </li>
                                                             <li class="kt-nav__item">
                                                                 <a href="javascript:void(0)" onclick="send('#promo{{$promo->id}}', '/admin/promo/remove/{{$promo->id}}', function() { $('#promo{{$promo->id}}').fadeOut('fast') })" class="kt-nav__link">
                                                                     <i class="kt-nav__link-icon flaticon2-trash"></i>
-                                                                    <span class="kt-nav__link-text">Удалить</span>
+                                                                    <span class="kt-nav__link-text">Delete</span>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -169,8 +169,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="g_create">Создать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="g_create">Create</button>
             </div>
         </div>
     </div>
@@ -198,8 +198,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="create">Создать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="create">Create</button>
             </div>
         </div>
     </div>
@@ -219,8 +219,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="g_edit">Редактировать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="g_edit">Edit</button>
             </div>
         </div>
     </div>
@@ -248,8 +248,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="edit">Редактировать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="edit">Edit</button>
             </div>
         </div>
     </div>

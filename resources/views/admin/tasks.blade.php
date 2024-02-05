@@ -2,7 +2,7 @@
 								<script>	window.location = "/admin" </script>
 								@endif
 								@if($settings->techworks === 0)
-<div id="__ajax_title" style="display: none">Задания</div>
+<div id="__ajax_title" style="display: none">Tasks</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid row">
     @foreach(\App\Task::get() as $task)
         @php
@@ -43,7 +43,7 @@
                                         <li class="kt-nav__item">
                                             <a href="javascript:void(0)" onclick="send('#task{{$task->id}}', '/admin/task/remove/{{$task->id}}', function() {window.location.reload()})" class="kt-nav__link">
                                                 <i class="kt-nav__link-icon flaticon2-trash"></i>
-                                                <span class="kt-nav__link-text">Удалить</span>
+                                                <span class="kt-nav__link-text">Delete</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -54,7 +54,7 @@
                             <div class="kt-widget__stats">
                                 <div class="kt-widget__item">
                                 <span class="kt-widget__date">
-                                    Начало
+                                    Start
                                 </span>
                                     <div class="kt-widget__label">
                                         <span class="btn btn-label-brand btn-sm btn-bold btn-upper">
@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="kt-widget__item">
                                 <span class="kt-widget__date">
-                                    Завершение
+                                    Completion
                                 </span>
                                     <div class="kt-widget__label">
                                         <span class="btn btn-label-danger btn-sm btn-bold btn-upper">
@@ -74,7 +74,7 @@
                                 </div>
 
                                 <div class="kt-widget__item flex-fill">
-                                    <span class="kt-widget__subtitel">До завершения</span>
+                                    <span class="kt-widget__subtitel">Until completion</span>
                                     @php
                                         $begin = $task->start_time;
                                         $now = time();
@@ -87,7 +87,7 @@
                                         </div>
                                         <span class="kt-widget__stat">
 										@if($percent > 100)
-										Завершён
+										Completed
 										@else
 									   {{$percent}}%
 										@endif
@@ -97,11 +97,11 @@
                             </div>
                             <div class="kt-widget__content">
                                 <div class="kt-widget__details">
-                                    <span class="kt-widget__subtitle">Награда</span>
+                                    <span class="kt-widget__subtitle">Reward</span>
                                     <span class="kt-widget__value">{{$task->reward}} <span>rub.</span></span>
                                 </div>
                                 <div class="kt-widget__details">
-                                    <span class="kt-widget__subtitle">Цена за 1 попытку</span>
+                                    <span class="kt-widget__subtitle">Price for 1 attempt</span>
                                     <span class="kt-widget__value">{{$task->price}} <span>rub.</span></span>
                                 </div>
                                 @php($users = \App\User::whereRaw('JSON_CONTAINS(`tasks_completed`, \''.$task->id.'\', \'$\')')->get())
@@ -143,9 +143,9 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="form-control-label">Начало:</label>
+                    <label class="form-control-label">Start:</label>
                     <div class="input-group date">
-                        <input type="text" class="form-control" id="start" placeholder="Начало" readonly="">
+                        <input type="text" class="form-control" id="start" placeholder="Start" readonly="">
                         <div class="input-group-append">
                             <span class="input-group-text">
                                 <i class="la la-calendar glyphicon-th"></i>
@@ -154,9 +154,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Завершение:</label>
+                    <label class="form-control-label">Completion:</label>
                     <div class="input-group date">
-                        <input type="text" class="form-control" id="end" placeholder="Завершение" readonly="">
+                        <input type="text" class="form-control" id="end" placeholder="Completion" readonly="">
                         <div class="input-group-append">
                             <span class="input-group-text">
                                 <i class="la la-calendar glyphicon-th"></i>
@@ -165,9 +165,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Цена за 1 попытку:</label>
+                    <label class="form-control-label">Price for 1 attempt:</label>
                     <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected">
-                        <input id="price" type="text" class="form-control" value="0.00" placeholder="Цена за 1 попытку">
+                        <input id="price" type="text" class="form-control" value="0.00" placeholder="Price for 1 attempt">
                     </div>
                 </div>
                 <div class="form-group">
@@ -196,8 +196,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="create">Создать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="create">Create</button>
             </div>
         </div>
     </div>

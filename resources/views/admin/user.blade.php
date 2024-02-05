@@ -6,7 +6,7 @@
 <div id="__ajax_title" style="display: none">{{$user->username}}</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     @if(Auth::user()->chat_role < 3)
-        Вам недоступна эта информация
+        This information is not available to you
     @else
     <div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
         <button class="kt-app__aside-close" id="kt_user_profile_aside_close">
@@ -38,7 +38,7 @@
                                 <div class="kt-widget__action">
                                     @php
                                         $chat_color = $user->chat_role == 2 ? "brand" : ($user->chat_role == 3 ? "danger" : ($user->chat_role == 1 ? "warning" : "primary"));
-                                        $chat_text = $user->chat_role == 2 ? "Модератор" : ($user->chat_role == 3 ? "Администратор" : ($user->chat_role == 4 ? "Фейк" : ($user->chat_role == 1 ? "YouTube" : "Пользователь")));
+                                        $chat_text = $user->chat_role == 2 ? "Moderator" : ($user->chat_role == 3 ? "Administrator" : ($user->chat_role == 4 ? "Fake" : ($user->chat_role == 1 ? "YouTube" : "User")));
                                     @endphp
                                     <button type="button" class="btn btn-{{$chat_color}} btn-sm">{{$chat_text}}</button>
                                 </div>
@@ -55,14 +55,14 @@
                                     </div>
                                 @else
                                     <div class="kt-widget__info">
-                                        <span class="kt-widget__label">ВКонтакте:</span>
+                                        <span class="kt-widget__label">In contact with:</span>
                                         <a href="https://vk.com/id{{$user->login2}}" target="_blank" class="kt-widget__data">
                                             {{$user->login2}}
                                         </a>
                                     </div>
                                 @endif
                                 <div class="kt-widget__info">
-                                    <span class="kt-widget__label">Сыграл игр:</span>
+                                    <span class="kt-widget__label">Played games:</span>
                                     <a href="javascript:void(0)" class="kt-widget__data">
                                         {{\App\Game::where('user_id', $user->id)->count()}}
                                     </a>
@@ -75,36 +75,36 @@
                                 </div>
                                 @if($user->level < 10)
                                     <div class="kt-widget__info">
-                                        <span class="kt-widget__label">Опыт:</span>
+                                        <span class="kt-widget__label">Experience:</span>
                                         <a href="javascript:void(0)" class="kt-widget__data">
                                             {{$user->exp}}/{{\App\User::getRequiredExperience($user->level+1)}}
                                         </a>
                                     </div>
                                 @endif
                                 <div class="kt-widget__info">
-                                    <span class="kt-widget__label">Депозит:</span>
+                                    <span class="kt-widget__label">Deposit:</span>
                                     <a href="javascript:void(0)" class="kt-widget__data">
                                         {{$user->deposit}} rub.
                                     </a>
                                 </div>
                                 <div class="kt-widget__info">
-                                    <span class="kt-widget__label">Выиграно:</span>
+                                    <span class="kt-widget__label">Won:</span>
                                     <span class="kt-widget__data">{{\App\Game::where('user_id', $user->id)->where('status', 1)->where('demo', 0)->sum('win')}} rub.</span>
                                 </div>
                                 <div class="kt-widget__info">
                                     <button id="ban" class="btn @if($user->global_ban == 0) btn-primary @else btn-danger @endif btn-block mt-2"
                                         onclick="send('#ban', '/admin/global_ban/{{$user->id}}/{{Auth::user()->id}}', function() { window.location.reload(); })">
                                         @if($user->global_ban == 0)
-                                            Заблокировать
+                                            Block
                                         @else
-                                            Разблокировать
+                                            Unblock
                                         @endif
                                     </button>
                                 </div>
                                 <div class="kt-widget__info">
                                     <button id="sendnotification" class="btn btn-primary btn-block mt-2"
                                                                                        onclick="$('#edit_id').val({{$user->id}}); $('#edit_name').val('{{$user->username}}'); " data-toggle="modal" data-target="#notification">
-                                         Отправить уведомление
+                                         Send notification
                                     </button>
                                 </div>
                             </div>
@@ -147,11 +147,11 @@
                                         <div class="row">
                                             <label class="col-xl-3"></label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <h3 class="kt-section__title kt-section__title-sm">Информация:</h3>
+                                                <h3 class="kt-section__title kt-section__title-sm">Information:</h3>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Аватар</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Avatar</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="kt-avatar kt-avatar--outline" id="kt_user_avatar">
                                                     <div class="kt-avatar__holder" style="background-image: url({{$user->avatar}})"></div>
@@ -161,22 +161,22 @@
                                         <div class="row">
                                             <label class="col-xl-3"></label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <h3 class="kt-section__title kt-section__title-sm">Счет:</h3>
+                                                <h3 class="kt-section__title kt-section__title-sm">Check:</h3>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Баланс</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Balance</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="input-group" id="money_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="fad fa-coins"></i></span></div>
-                                                    <input oninput="delayedv('#money', function(v) { send('#money_grp', '/admin/change_balance/{{$user->id}}/'+v) })" id="money" type="text" class="form-control" value="{{$user->money}}" placeholder="Баланс" aria-describedby="basic-addon1">
+                                                    <input oninput="delayedv('#money', function(v) { send('#money_grp', '/admin/change_balance/{{$user->id}}/'+v) })" id="money" type="text" class="form-control" value="{{$user->money}}" placeholder="Balance" aria-describedby="basic-addon1">
                                                 </div>
                                             </div>
                                         </div>
 										<div class="row">
                                             <label class="col-xl-3"></label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <h3 class="kt-section__title kt-section__title-sm">Профиль:</h3>
+                                                <h3 class="kt-section__title kt-section__title-sm">Profile:</h3>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -184,7 +184,7 @@
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="input-group" id="lvl_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-code-branch"></i></span></div>
-                                                    <input oninput="delayedv('#lvl', function(v) { send('#lvl_grp', '/admin/change_lvl/{{$user->id}}/'+v) })" id="lvl" type="text" class="form-control" value="{{$user->level}}" placeholder="Уровень" aria-describedby="basic-addon1">
+                                                    <input oninput="delayedv('#lvl', function(v) { send('#lvl_grp', '/admin/change_lvl/{{$user->id}}/'+v) })" id="lvl" type="text" class="form-control" value="{{$user->level}}" placeholder="Level" aria-describedby="basic-addon1">
                                                 </div>
                                             </div>
                                         </div>
@@ -200,50 +200,50 @@
 										                            <div class="form-group row">
                                 <label class="col-lg-8 col-xl-5">
                                     <input id="email_confirmed" @if($user['email_confirmed'] == 1) checked @endif type="checkbox"
-                                        onclick="send('#emailconf', '/admin/email_confirmed/{{$user->id}}/'+($('#email_confirmed').is(':checked') ? '1' : '0'))"> Email успешно подтверждён
+                                        onclick="send('#emailconf', '/admin/email_confirmed/{{$user->id}}/'+($('#email_confirmed').is(':checked') ? '1' : '0'))"> Email successfully confirmed
                                     <span></span>
                                 </label>
                             </div>
                                         <div class="row">
                                             <label class="col-xl-3"></label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <h3 class="kt-section__title kt-section__title-sm">Реферальная программа:</h3>
+                                                <h3 class="kt-section__title kt-section__title-sm">Referral program:</h3>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Реферальный код</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Referral code</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <input disabled class="form-control" type="text" value="{{$user->ref_code}}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Использованный реферальный код</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Referral code used</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <input disabled class="form-control" type="text" value="{{$user->ref_use}}">
                                                 <span class="form-text text-muted">
                                                     @if($user->ref_use == null)
-                                                        Реферальный код не был использован
-                                                    @else
-                                                        @php
-                                                            $referrer = \App\User::where('ref_code', $user->ref_use)->first();
-                                                        @endphp
-                                                        @if($referrer == null)
-                                                            Реферальный код был использован, но его владельца не удалось найти
-                                                        @else
-                                                            Владелец: <a href="/admin/user?id={{$referrer->id}}" target="_blank">{{$referrer->username}}</a>
-                                                        @endif
-                                                    @endif
+                                                         Referral code was not used
+                                                     @else
+                                                         @php
+                                                             $referrer = \App\User::where('ref_code', $user->ref_use)->first();
+                                                         @endphp
+                                                         @if($referrer == null)
+                                                             The referral code was used, but its owner could not be found
+                                                         @else
+                                                             Owner: <a href="/admin/user?id={{$referrer->id}}" target="_blank">{{$referrer->username}}</a>
+                                                         @endif
+                                                     @endif
                                                 </span>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <label class="col-xl-3"></label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <h3 class="kt-section__title kt-section__title-sm">Права:</h3>
+                                                <h3 class="kt-section__title kt-section__title-sm">Legal:</h3>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Права</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Legal</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="kt-section">
                                                     <div class="kt-section__content kt-section__content--border kt-section__content--fit">
@@ -252,7 +252,7 @@
                                                                 <a href="javascript:void(0)" class="kt-nav__link"
                                                                    onclick="send('#chat_rights', '/admin/change_rights/{{$user->id}}/0', function() { $('*[data-chat-selection]').removeClass('kt-nav__item--active'); $('#c_u').addClass('kt-nav__item--active'); })">
                                                                     <i class="kt-nav__link-icon fal fa-user"></i>
-                                                                    <span class="kt-nav__link-text">Пользователь</span>
+                                                                    <span class="kt-nav__link-text">User</span>
                                                                 </a>
                                                             </li>
                                                             <li data-chat-selection="true" id="c_y" class="kt-nav__item @if($user->chat_role == 1) kt-nav__item--active @endif">
@@ -266,21 +266,21 @@
                                                                 <a href="javascript:void(0)" class="kt-nav__link"
                                                                    onclick="send('#chat_rights', '/admin/change_rights/{{$user->id}}/2', function() { $('*[data-chat-selection]').removeClass('kt-nav__item--active'); $('#c_m').addClass('kt-nav__item--active'); })">
                                                                     <i class="kt-nav__link-icon fal fa-shield-alt"></i>
-                                                                    <span class="kt-nav__link-text">Модератор</span>
+                                                                    <span class="kt-nav__link-text">Moderator</span>
                                                                 </a>
                                                             </li>
                                                             <li data-chat-selection="true" id="c_a" class="kt-nav__item @if($user->chat_role == 3) kt-nav__item--active @endif">
                                                                 <a href="javascript:void(0)" class="kt-nav__link"
                                                                    onclick="send('#chat_rights', '/admin/change_rights/{{$user->id}}/3', function() { $('*[data-chat-selection]').removeClass('kt-nav__item--active'); $('#c_a').addClass('kt-nav__item--active');})">
                                                                     <i class="kt-nav__link-icon fal fa-cog"></i>
-                                                                    <span class="kt-nav__link-text">Администратор</span>
+                                                                    <span class="kt-nav__link-text">Administrator</span>
                                                                 </a>
                                                             </li>
 															<li data-chat-selection="true" id="c_f" class="kt-nav__item @if($user->chat_role == 4) kt-nav__item--active @endif">
                                                                 <a href="javascript:void(0)" class="kt-nav__link"
                                                                    onclick="send('#chat_rights', '/admin/change_rights/{{$user->id}}/4', function() { $('*[data-chat-selection]').removeClass('kt-nav__item--active'); $('#c_f').addClass('kt-nav__item--active');})">
                                                                     <i class="kt-nav__link-icon fal fa-cog"></i>
-                                                                    <span class="kt-nav__link-text">Фейк</span>
+                                                                    <span class="kt-nav__link-text">Fake</span>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -299,7 +299,7 @@
                         <div class="kt-portlet__head">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
-                                    Журнал
+                                    Magazine
                                 </h3>
                             </div>
                         </div>
@@ -321,27 +321,27 @@
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Отправить уведомление</h5>
+                <h5 class="modal-title">Send notification</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <input style="display: none" type="hidden" value="-1" id="edit_id">
                 <div class="form-group">
-                    <label class="form-control-label">Пользователь:</label>
+                    <label class="form-control-label">User:</label>
                     <input type="text" class="form-control" id="edit_name" disabled="disabled">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Заголовок:</label>
+                    <label class="form-control-label">Title:</label>
                     <input type="text" class="form-control" id="edit_title">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Текст сообщения:</label>
+                    <label class="form-control-label">Message text:</label>
                     <input type="text" class="form-control" id="edit_message">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="edit">Отправить</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="edit">Send</button>
             </div>
         </div>
     </div>

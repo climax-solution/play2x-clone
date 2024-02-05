@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="col-xs-6">
-                <div class="b_label">Шанс</div>
+                <div class="b_label">Chance</div>
                 <input disabled id="i_chance" value="50%" type="text" class="b_input_s mt5" data-number-input="true">
             </div>
         </div>

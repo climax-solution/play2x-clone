@@ -1,4 +1,4 @@
-<div id="__ajax_title" style="display: none">Кейсы</div>
+<div id="__ajax_title" style="display: none">Cases</div>
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid row">
     @foreach(\App\Box::get() as $box)
         <div class="col-xl-4">
@@ -27,13 +27,13 @@
                                         <li class="kt-nav__item">
                                             <a href="javascript:void(0)" onclick="cid = {{$box->id}};" data-toggle="modal" data-target="#add" class="kt-nav__link">
                                                 <i class="kt-nav__link-icon flaticon2-add"></i>
-                                                <span class="kt-nav__link-text">Добавить предмет</span>
+                                                <span class="kt-nav__link-text">Add item</span>
                                             </a>
                                         </li>
                                         <li class="kt-nav__item">
                                             <a href="javascript:void(0)" onclick="send('#box{{$box->id}}', '/admin/case/remove/{{$box->id}}', function() {window.location.reload()})" class="kt-nav__link">
                                                 <i class="kt-nav__link-icon flaticon2-trash"></i>
-                                                <span class="kt-nav__link-text">Удалить</span>
+                                                <span class="kt-nav__link-text">Delete</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -44,7 +44,7 @@
                             <div class="kt-widget__content">
                                 <div class="kt-widget__details">
 
-                                    <span class="kt-widget__subtitle">Цена</span>
+                                    <span class="kt-widget__subtitle">Price</span>
                                     <span class="kt-widget__value">{{$box->price}} <span>rub.</span></span>
                                 </div>
                             </div>
@@ -68,13 +68,13 @@
                     <input type="text" class="form-control" id="name">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Цена:</label>
+                    <label class="form-control-label">Price:</label>
                     <input type="text" class="form-control" id="price">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="create">Создать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="create">Create</button>
             </div>
         </div>
     </div>
@@ -83,30 +83,30 @@
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Новый предмет</h5>
+                <h5 class="modal-title">New item</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="form-control-label">Тип предмета:</label>
+                    <label class="form-control-label">Item type:</label>
                     <input type="text" class="form-control" placeholder="1 - Деньги, 2 - Опыт" id="type">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Cумма денег/опыта:</label>
+                    <label class="form-control-label">Amount of money/experience:</label>
                     <input type="text" class="form-control" placeholder="123" id="value">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Шанс:</label>
-                    <input type="text" class="form-control" placeholder="От 0 до 100" id="chance">
+                    <label class="form-control-label">Chance:</label>
+                    <input type="text" class="form-control" placeholder="From 0 to 100" id="chance">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Редкость (цвет)</label>
+                    <label class="form-control-label">Rarity (color)</label>
                     <input type="text" class="form-control" placeholder="none, green, rare, purple, orange, red" id="rarity">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-primary" id="i_create">Создать</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="i_create">Create</button>
             </div>
         </div>
     </div>

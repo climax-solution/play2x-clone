@@ -106,22 +106,21 @@
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-15" aria-controls="ui-id-16" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>При выводе появляется ошибка</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-16" aria-labelledby="ui-id-15" role="tabpanel" aria-hidden="true" style="display: none;">
-					<p class="help-a__text">В случае возникновения ошибки при выводе, внимательно ознакомьтесь с ее содержанием. 
-						Как правило, в тексте ошибки указан способ ее устранения. К основным причинам, по которым администрация в праве отказать в выводе, относятся: </p>
-					<div class="help-a__way">Причина 1</div>
-					<p class="help-a__text">У вас обнаружены мультиаккаунты. Для уточнения дальнейших действий обращайтесь в поддержку.</p>
-					<div class="help-a__way">Причина 2</div>
-					<p class="help-a__text">Не отыграна сумма пополнений. Пополнение необходимо отыграть в однократном размере на любых режимах на коэффициентах не ниже х1.30.</p>
-					<div class="help-a__way">Причина 3</div>
-					<p class="help-a__text">Вы указали неверный или подозрительный кошелек для вывода (например, в местном, а не международном формате).</p>
-					<div class="help-a__way">Причина 4</div>
-					<p class="help-a__text">Вы пытаетесь вывести на анонимный Яндекс.Кошелек. Для устранения этой ошибки измените способ вывода или повысьте статус своего кошелька.</p>
+					<p class="help-a__text">If an error occurs during output, carefully read its contents.
+					As a rule, the text of the error indicates how to eliminate it. The main reasons why the administration has the right to refuse withdrawal include: </p>
+					<div class="help-a__way">Reason 1</div>
+					<p class="help-a__text">You have multi-accounts detected. To clarify further actions, please contact support.</p>
+					<div class="help-a__way">Reason 2</div>
+					<p class="help-a__text">The top-up amount has not been won back. The deposit must be wagered in a single amount on any modes at odds not lower than x1.30.</p>
+					<div class="help-a__way">Reason 3</div>
+					<p class="help-a__text">You specified an incorrect or suspicious wallet for withdrawal (for example, in local rather than international format).</p>
+					<div class="help-a__way">Reason 4</div>
+					<p class="help-a__text">You are trying to withdraw to an anonymous Yandex.Wallet. To resolve this error, change your withdrawal method or upgrade your wallet status.</p>
 				</div>
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-17" aria-controls="ui-id-18" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Я произвел вывод, но монеты вернулись на баланс</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-18" aria-labelledby="ui-id-17" role="tabpanel" aria-hidden="true" style="display: none;">
-					<p class="help-a__text">Такая ситуация означает, что вывод был отменен вручную администрацией сайта. 
-						Это редкая ситуация, которая происходит при подозрении на нарушение правил с вашей стороны или неправильно указанный вами кошелек. В таких случаях администрация всегда указывает причину отмены вывода. Ее можно посмотреть в <a href="javascript:void(0)" onclick="@if(Auth::guest()) $('#b_si').click(); @else load('/user?id={{Auth::user()->id}}'); @endif" class="colored-link">Профиле</a> во вкладке "Выплаты" в графе "Статус".</p>
+					<p class="help-a__text">This situation means that the withdrawal was manually canceled by the site administration. This is a rare situation that occurs when there is a suspicion of a violation of the rules on your part or an incorrectly specified wallet. In such cases, the administration always indicates the reason for canceling the withdrawal. It can be viewed in <a href="javascript:void(0)" onclick="@if(Auth::guest()) $('#b_si').click(); @else load('/user?id ={{Auth::user()->id}}'); @endif" class="colored-link">Profile</a> in the "Payments" tab in the "Status" column.</p>
 				</div>
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-19" aria-controls="ui-id-20" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Вывод выполнен, но деньги не пришли</div>
@@ -176,7 +175,7 @@
 					Генератор случайных чисел создает доĸазуемые и абсолютно честные случайные числа, ĸоторые используются для определения результата ĸаждой игры, сыгранной на сайте. Каждый пользователь может проверить исход любой игры полностью детерминированным способом. Предоставляя один параметр - ĸлиентсĸий хэш, на входы генератора случайных чисел, {{$settings->namesite}} не может манипулировать результатами в свою пользу. Генератор случайных чисел {{$settings->namesite}} позволяет ĸаждой игре запрашивать любое ĸоличество случайных чисел из заданного начального числа ĸлиента, начального числа сервера и одноразового номера. Подробнее о том, ĸаĸ это работает вы можете узнать на странице честной игры.
 				</div>
 				
-				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Партнерская программа</div>
+				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Affiliate program</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
 					Приглашайте других игроĸов на наш сайт по вашей реферальной ссылĸе и зарабатывайте деньги. Подробности вы можете узнать в вашем профиле.
 				</div>
@@ -191,7 +190,7 @@
                 Викторина может проводится автоматически в виде простых вопросов, либо модераторами сайта. Первый правильно ответивший на вопрос игрок получает вознаграждение.
 				</div>
 				
-				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Задания</div>
+				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Tasks</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
                  Принимай участие в еженедельных заданиях и выигрывай призы! У каждого задания есть условие, которое требуется выполнить для получения награды. Для участия в задании приобрети одну или несколько попыток. Попытки тратятся после каждой игры независимо от ее результата. Играй в игры как и обычно - мы дадим знать о всем, что требуется: кол-во оставшихся попыток, а так же выполнили ли вы условие или нет!
 				</div>
