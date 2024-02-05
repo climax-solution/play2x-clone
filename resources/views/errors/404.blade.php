@@ -29,9 +29,9 @@
     </div>
     <div class="header">404</div>
     <div>
-        Страница не найдена.
+        Page not found.
         <br>
-        <a href="/">На главную</a>
+        <a href="/">To main</a>
     </div>
 </div>
 </body>

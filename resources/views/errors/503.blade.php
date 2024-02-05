@@ -29,9 +29,9 @@
     </div>
     <div class="header">503</div>
     <div>
-        Произошла серверная ошибка.
+        A server error has occurred.
         <br>
-        <a href="/">На главную</a>
+        <a href="/">To main</a>
     </div>
 </div>
 </body>

@@ -29,9 +29,9 @@
     </div>
     <div class="header">403</div>
     <div>
-        Доступ запрещен.
+    Access is denied.
         <br>
-        <a href="/">На главную</a>
+        <a href="/">To main</a>
     </div>
 </div>
 </body>

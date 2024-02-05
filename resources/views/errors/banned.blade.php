@@ -29,12 +29,12 @@
     </div>
     <div class="header">Упс...</div>
     <div>
-        Мы обнаружили подозрительную активность 
-		<p>на вашем аккаунте.</p>
+        We have detected suspicious activity
+        <p>on your account.</p>
         <br>
-        <a href="https://vk.com/{{$settings->vk_url}}" target="_blank">Сообщите об этом нам</a>
+        <a href="https://vk.com/{{$settings->vk_url}}" target="_blank">Let us know about it</a>
         <br><br>
-        <a href="/">На главную</a>
+        <a href="/">To main</a>
     </div>
 </div>
 </body>

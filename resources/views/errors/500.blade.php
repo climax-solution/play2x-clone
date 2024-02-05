@@ -29,11 +29,11 @@
     </div>
     <div class="header">500</div>
     <div>
-        Произошла серверная ошибка.
+        A server error has occurred.
         <br>
-        <a href="https://vk.com/{{$settings->vk_url}}" target="_blank">Сообщите об этом нам</a>
+        <a href="https://vk.com/{{$settings->vk_url}}" target="_blank">Let us know about it</a>
         <br><br>
-        <a href="/">На главную</a>
+        <a href="/">To main</a>
     </div>
 </div>
 </body>

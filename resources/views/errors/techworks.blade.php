@@ -27,11 +27,11 @@
     <div class="icon">
         <i class="fad fa-exclamation-triangle"></i>
     </div>
-    <div class="header">Технические работы</div>
+    <div class="header">Engineering works</div>
     <div>
-        Сайт временно недоступен.
+    The site is temporarily unavailable.
         <br><br>
-        <a href="https://vk.com/{{$settings->vk_url}}" target="_blank">Следите за новостями</a>
+        <a href="https://vk.com/{{$settings->vk_url}}" target="_blank">Follow the news</a>
     </div>
 </div>
 </body>

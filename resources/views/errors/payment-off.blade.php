@@ -27,12 +27,12 @@
     <div class="icon">
         <i class="fad fa-exclamation-triangle"></i>
     </div>
-    <div class="header">Упс...</div>
+    <div class="header">Oops...</div>
     <div>
-        Пополнения временно не работают.
+    Top-ups are temporarily unavailable.
         <br><br>
 		<div></div>
-        <a href="/">На главную</a>
+        <a href="/">To main</a>
     </div>
 </div>
 </body>
