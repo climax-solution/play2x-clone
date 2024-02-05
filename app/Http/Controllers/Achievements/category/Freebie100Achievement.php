@@ -7,11 +7,11 @@ class Freebie100Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Халявщик';
+        return 'Freebie';
     }
 
     public function description(): string {
-        return 'Активируйте промокод 100 раз';
+        return 'Activate promo code 100 times';
     }
 
     public function category(): string {

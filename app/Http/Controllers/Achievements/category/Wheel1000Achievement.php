@@ -11,7 +11,7 @@ class Wheel1000Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Wheel 1000 раз';
+        return 'Win at Wheel 1000 times';
     }
 
     public function category(): string {

@@ -130,7 +130,7 @@ class GeneralController extends Controller {
             case 9: return 'Tower';
             case 10: return 'Roulette';
             case 11: return 'Stairs';
-            case 12: return 'Кейсы';
+            case 12: return 'Cases';
             case 13: return 'Plinko';
             case 14: return 'Keno';
         }
@@ -203,14 +203,14 @@ class GeneralController extends Controller {
 	
 	 public function task_description($id) {
         $task = Task::where('id', $id)->first();
-        if($task == null) return 'Задания не существует';
+        if($task == null) return 'The task does not exist';
         switch ($task->game_id) {
-            case 3: return 'Достигнуть значения коэффициента x'.$task->value; break;
-            case 4: return 'Угадать сторону '.$this->declOfNum($task->value, array('раз', 'раза', 'раз')).' подряд'; break;
+            case 3: return 'Reach the value of the coefficient x'.$task->value; break;
+            case 4: return 'Guess the side '.$this->declOfNum($task->value, array('times', 'times', 'times')).' contract'; break;
             case 5:
-            case 9: return 'Открыть ячейки '.$this->declOfNum($task->value, array('раз', 'раза', 'раз')).' подряд'; break;
-            case 1: return 'Получить число '.$task->value; break;
-            case 7: return 'Угадать карты '.$this->declOfNum($task->value, array('раз', 'раза', 'раз')).' подряд'; break;
+            case 9: return 'Open cells '.$this->declOfNum($task->value, array('times', 'times', 'times')).' contract'; break;
+            case 1: return 'Get number '.$task->value; break;
+            case 7: return 'Guess the cards '.$this->declOfNum($task->value, array('times', 'times', 'times')).' contract'; break;
             default: return 'N/A';
         }
     }
@@ -421,7 +421,7 @@ class GeneralController extends Controller {
             $user->client_seed = $this->generate_seed($user->username);
             $user->save();
           }
-        $this->sendEmail($email, 'Подтверждение аккаунта test', view('pages.email.confirm')->with('hash', $email_confirm_hash)->toHtml());
+        $this->sendEmail($email, 'Account confirmation test', view('pages.email.confirm')->with('hash', $email_confirm_hash)->toHtml());
 
         return json_encode(array('response' => 'success'));
     }
@@ -433,7 +433,7 @@ class GeneralController extends Controller {
             $user->email_confirm_hash = $this->generate_seed();
             $user->save();
         }
-        $this->sendEmail(Auth::user()->email, 'Подтверждение аккаунта test', view('pages.email.confirm')->with('hash', Auth::user()->email_confirm_hash)->toHtml());
+        $this->sendEmail(Auth::user()->email, 'Account confirmation test', view('pages.email.confirm')->with('hash', Auth::user()->email_confirm_hash)->toHtml());
         return 'ok';
     }
 
@@ -1997,18 +1997,18 @@ public function fakegamewheel($salt) {
 	
 		public function randomPay() {
          $pays = array(
-        'Qiwi',
-		'Qiwi',
-		'Qiwi',
-		'Qiwi',
-        'Яндекс.Деньги',
-		'Яндекс.Деньги',
-		'Яндекс.Деньги',
-        'Мегафон',
-		'МТС',
-		'Билайн',
-		'Tele2'
-    );
+            'Qiwi',
+            'Qiwi',
+            'Qiwi',
+            'Qiwi',
+            'Yandex money',
+            'Yandex money',
+            'Yandex money',
+            'Megaphone',
+            'MTS',
+            'Beeline',
+            'Tele2'
+        );
     $pay = $pays[rand ( 0 , count($pays) -1)];
     return $pay;
 }
@@ -2264,35 +2264,35 @@ public function fakegamewheel($salt) {
             if($playerScore <= 21) {
                 $win = $game->bet;
                 $responseType = 'success';
-                $responseHeader = 'Ничья!';
+                $responseHeader = 'Draw!';
             } else {
                 $responseType = 'error';
-                $responseHeader = 'Вы проиграли!';
+                $responseHeader = 'You lose!';
             }
         } else if($playerScore > $dealerScore) {
             if($playerScore == 21 && $playerHandSize < 3) {
                 $win = ($game->bet * 2) + ($game->bet / 2);
                 $responseType = 'success';
-                $responseHeader = 'Вы выиграли!';
+                $responseHeader = 'You win!';
                 $responseMessage = 'У вас блэкджек!';
             } else if($playerScore <= 21) {
                 $win = $game->bet * 2;
                 $responseType = 'success';
-                $responseHeader = 'Вы выиграли!';
+                $responseHeader = 'You win!';
             } else if($playerScore > 21) {
                 $responseType = 'error';
-                $responseHeader = 'Вы проиграли!';
-                $responseMessage = 'Вы набрали более 21 очков.';
+                $responseHeader = 'You lose!';
+                $responseMessage = 'You have scored more than 21 points.';
             }
         } else if($playerScore < $dealerScore) {
             if($playerScore <= 21 && $dealerScore > 21) {
                 $win = $game->bet * 2;
                 $responseType = 'success';
-                $responseHeader = 'Вы выиграли!';
-                $responseMessage = 'Дилер набрал более 21 очков.';
+                $responseHeader = 'You win!';
+                $responseMessage = 'The dealer scored more than 21 points.';
             } else if($dealerScore <= 21) {
                 $responseType = 'error';
-                $responseHeader = 'Вы проиграли!';
+                $responseHeader = 'You lose!';
             }
         }
 
@@ -3716,18 +3716,18 @@ $game = $games->sortBy('time');
 			
             if($user->welcome_notification == 0) {
                 Notification::send($user->id, 'fad fa-galaxy', 'test',
-                    'Добро пожаловать на test!'
-                    . '<br>Посетите <a class="ll" href="javascript:void(0)" onclick="load(\'bonus\')">страницу с бонусами</a> для начала игры.'
-                    . '<br>Есть вопросы? Задавайте их в чат или в <a class="ll" href="javascript:void(0)" onclick="window.open(\'https://vk.com/test\', \'_blank\')">службу поддержку test</a>!');
+                    'Welcome to test!'
+                    . '<br>Visit the <a class="ll" href="javascript:void(0)" onclick="load(\'bonus\')">bonus page</a> to start playing.'
+                    . '<br>Any questions? Ask them in the chat or in <a class="ll" href="javascript:void(0)" onclick="window.open(\'https://vk.com/test\', \'_blank\') ">test support service</a>!');
                 $user->welcome_notification = 1;
                 $user->save();
             }
 			
 						if($user->email == null && $user->email_notification == 0) {
-                Notification::send($user->id, 'fad fa-galaxy', 'Безопасность',
-                    'Не забудьте добавить свой Email адрес и пароль!'
-                    . '<br>Иначе вы можете потерять доступ к своему аккаунту!'
-                    . '<br><a class="ll" href="/user?id='.$user->id.'#settings">Посетить настройки сейчас.</a>');
+                Notification::send($user->id, 'fad fa-galaxy', 'Safety',
+                    "Don't forget to add your Email address and password!"
+                    . '<br>Otherwise you may lose access to your account!'
+                    . '<br><a class="ll" href="/user?id='.$user->id.'#settings">Visit settings now.</a>');
                 $user->email_notification = 1;
                 $user->save();
             }
@@ -3875,20 +3875,20 @@ $game = $games->sortBy('time');
         $settings = Settings::where('id', 1)->first();
         $sign = md5($settings->ap_id.':'.$r->AMOUNT.':'.$settings->ap_api_key.':'.$r->MERCHANT_ORDER_ID); 
         if($sign !== $r->SIGN) { 
-            if(!Auth::guest()) self::logTransaction(0, 16, 'Ошибка подписи', Auth::user()->id);
-            return 'Ошибка подписи';
+            if(!Auth::guest()) self::logTransaction(0, 16, 'Signature error', Auth::user()->id);
+            return 'Signature error';
         }
 
        $payment = DB::table('payments')->where('id', $r->MERCHANT_ORDER_ID)->first();
 		 if(empty($payment))
  {
-            if(!Auth::guest()) self::logTransaction(0, 16, 'Платеж не найден', Auth::user()->id);
-            return 'Платеж не найден';
+            if(!Auth::guest()) self::logTransaction(0, 16, 'Payment not found', Auth::user()->id);
+            return 'Payment not found';
         } 
 
         if($payment->status != 0) {
-            self::logTransaction(0, 16, 'Уже оплачен', $payment->user);
-            return "Уже оплачен";
+            self::logTransaction(0, 16, 'Already paid', $payment->user);
+            return "Already paid";
         }
 
         $user = User::where('id', $payment->user)->first();
@@ -4115,10 +4115,10 @@ $game = $games->sortBy('time');
     }
 	
 	public static function formatDate($unixTimestamp) {
-        $monthsList = array(".01." => "января", ".02." => "февраля",
-            ".03." => "марта", ".04." => "апреля", ".05." => "мая", ".06." => "июня",
-            ".07." => "июля", ".08." => "августа", ".09." => "сентября",
-            ".10." => "октября", ".11." => "ноября", ".12." => "декабря");
+        $monthsList = array(".01." => "January", ".02." => "February",
+        ".03." => "March", ".04." => "April", ".05." => "May", ".06." => "June",
+        ".07." => "July", ".08." => "August", ".09." => "September",
+        ".10." => "October", ".11." => "November", ".12." => "December");
         $days = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
         $datew = new DateTime(null, new DateTimeZone('etc/GMT+0'));
         $datew->setTimestamp($unixTimestamp);

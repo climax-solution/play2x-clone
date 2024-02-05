@@ -7,11 +7,11 @@ class Level8Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Завсегдатай';
+        return 'Regular';
     }
 
     public function description(): string {
-        return 'Достигните 8 уровня';
+        return 'Reach level 8';
     }
 
     public function category(): string {

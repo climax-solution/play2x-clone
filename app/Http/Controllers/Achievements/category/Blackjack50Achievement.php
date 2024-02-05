@@ -7,11 +7,11 @@ class Blackjack50Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Шулер';
+        return 'Blackjack';
     }
 
     public function description(): string {
-        return 'Сыграйте в Blackjack 50 раз';
+        return 'Play Blackjack 50 times';
     }
 
     public function category(): string {

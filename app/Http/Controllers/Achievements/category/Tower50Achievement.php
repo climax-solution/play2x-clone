@@ -7,11 +7,11 @@ class Tower50Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'На высоте';
+        return 'Tower';
     }
 
     public function description(): string {
-        return 'Доберитесь до конца Tower 50 раз';
+        return 'Reach the end of the Tower 50 times';
     }
 
     public function category(): string {

@@ -7,11 +7,11 @@ class Referral500Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Душа компании';
+        return 'Sole of company';
     }
 
     public function description(): string {
-        return 'Пригласите 500 активных рефералов';
+        return 'Invite 500 active referrals';
     }
 
     public function category(): string {

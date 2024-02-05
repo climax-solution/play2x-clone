@@ -7,11 +7,11 @@ class Mines5000Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Сапер';
+        return 'Mines';
     }
 
     public function description(): string {
-        return 'Откройте 5000 алмазов';
+        return 'Unlock 5000 diamonds';
     }
 
     public function category(): string {

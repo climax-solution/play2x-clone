@@ -7,11 +7,11 @@ class Mines50Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Сапер';
+        return 'Mines';
     }
 
     public function description(): string {
-        return 'Откройте 50 алмазов';
+        return 'Open 50 diamonds';
     }
 
     public function category(): string {

@@ -11,7 +11,7 @@ class Keno250Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Keno 250 раз';
+        return 'Win 250 times at Keno';
     }
 
     public function category(): string {

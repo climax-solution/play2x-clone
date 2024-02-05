@@ -7,11 +7,11 @@ class Blackjack21_50Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Шулер';
+        return 'Blackjack';
     }
 
     public function description(): string {
-        return 'Соберите 21 очко в Blackjack 50 раз';
+        return 'Collect 21 points in Blackjack 50 times';
     }
 
     public function category(): string {

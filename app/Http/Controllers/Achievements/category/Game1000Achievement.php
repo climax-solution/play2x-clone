@@ -7,11 +7,11 @@ class Game1000Achievement extends Achievement {
     }
 
     public function name(): string {
-        return '1000 игр';
+        return '1000 games';
     }
 
     public function description(): string {
-        return 'Сыграйте 1000 игр';
+        return 'Play 1000 games';
     }
 
     public function category(): string {

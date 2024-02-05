@@ -11,7 +11,7 @@ class Tower200Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Доберитесь до конца Tower 200 раз';
+        return 'Reach the end of the Tower 200 times';
     }
 
     public function category(): string {

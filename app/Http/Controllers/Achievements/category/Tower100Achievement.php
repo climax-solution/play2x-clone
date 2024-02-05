@@ -7,11 +7,11 @@ class Tower100Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'На высоте';
+        return 'Tower';
     }
 
     public function description(): string {
-        return 'Сыграйте в Tower 100 раз';
+        return 'Reach the end of the Tower 100 times';
     }
 
     public function category(): string {

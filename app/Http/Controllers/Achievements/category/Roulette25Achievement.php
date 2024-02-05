@@ -7,11 +7,11 @@ class Roulette25Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Крупье';
+        return 'Roulette';
     }
 
     public function description(): string {
-        return 'Выиграйте коэффициент x36 в Roulette 25 раз';
+        return 'Win x36 odds in Roulette 25 times';
     }
 
     public function category(): string {

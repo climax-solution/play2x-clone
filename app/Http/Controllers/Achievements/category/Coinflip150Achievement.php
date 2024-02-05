@@ -11,7 +11,7 @@ class Coinflip150Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Coinflip 150 раз';
+        return 'Win 150 times on Coinflip';
     }
 
     public function category(): string {

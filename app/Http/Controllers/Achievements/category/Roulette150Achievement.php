@@ -7,11 +7,11 @@ class Roulette150Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Крупье';
+        return 'Roulette';
     }
 
     public function description(): string {
-        return 'Выиграйте коэффициент x3 в Roulette 150 раз';
+        return 'Win x3 odds in Roulette 150 times';
     }
 
     public function category(): string {

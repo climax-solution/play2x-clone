@@ -7,11 +7,11 @@ class Level3Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Завсегдатай';
+        return 'Regular';
     }
 
     public function description(): string {
-        return 'Достигните 3 уровня';
+        return 'Reach level 3';
     }
 
     public function category(): string {

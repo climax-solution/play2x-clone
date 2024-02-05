@@ -7,11 +7,11 @@ class Referral100Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Душа компании';
+        return 'Sole of company';
     }
 
     public function description(): string {
-        return 'Пригласите 100 активных рефералов';
+        return 'Invite 100 active referrals';
     }
 
     public function category(): string {

@@ -11,7 +11,7 @@ class Plinko1000Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Plinko 1000 раз';
+        return 'Win 1000 times at Plinko';
     }
 
     public function category(): string {

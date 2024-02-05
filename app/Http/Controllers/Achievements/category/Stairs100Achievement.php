@@ -7,11 +7,11 @@ class Stairs100Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Без помех';
+        return 'Stairs';
     }
 
     public function description(): string {
-        return 'Сыграйте в Stairs 100 раз';
+        return 'Reach the end of Stairs 100 times';
     }
 
     public function category(): string {

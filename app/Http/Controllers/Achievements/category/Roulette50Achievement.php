@@ -7,11 +7,11 @@ class Roulette50Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Крупье';
+        return 'Roulette';
     }
 
     public function description(): string {
-        return 'Сыграйте в Roulette 50 раз';
+        return 'Play Roulette 50 times';
     }
 
     public function category(): string {

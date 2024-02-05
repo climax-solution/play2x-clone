@@ -7,11 +7,11 @@ class Level5Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Завсегдатай';
+        return 'Regular';
     }
 
     public function description(): string {
-        return 'Достигните 5 уровня';
+        return 'Reach level 5';
     }
 
     public function category(): string {

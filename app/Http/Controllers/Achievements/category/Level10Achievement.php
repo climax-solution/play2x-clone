@@ -7,11 +7,11 @@ class Level10Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Завсегдатай';
+        return 'Regular';
     }
 
     public function description(): string {
-        return 'Достигните 10 уровня';
+        return 'Reach level 10';
     }
 
     public function category(): string {

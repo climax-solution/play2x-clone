@@ -11,7 +11,7 @@ class Dice200Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Dice 200 раз';
+        return 'Win 200 times at Dice';
     }
 
     public function category(): string {

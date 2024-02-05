@@ -7,11 +7,11 @@ class Blackjack200Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Шулер';
+        return 'Blackjack';
     }
 
     public function description(): string {
-        return 'Выиграйте крупье в Blackjack 200 раз';
+        return 'Beat the dealer at Blackjack 200 times';
     }
 
     public function category(): string {

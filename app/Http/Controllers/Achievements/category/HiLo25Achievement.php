@@ -11,7 +11,7 @@ class HiLo25Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в HiLo 25 раз';
+        return 'Win 25 times at HiLo';
     }
 
     public function category(): string {

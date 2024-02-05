@@ -7,11 +7,11 @@ class Freebie15Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Халявщик';
+        return 'Freebie';
     }
 
     public function description(): string {
-        return 'Прокрутите колесо с бонусом 15 раз';
+        return 'Spin the bonus wheel 15 times';
     }
 
     public function category(): string {

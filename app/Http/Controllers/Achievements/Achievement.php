@@ -106,7 +106,7 @@ abstract class Achievement {
             $user->save();
         }
 
-        Notification::send($user->id, 'fad fa-award', 'Достижение разблокировано: '.$achievement->name(), $achievement->description());
+        Notification::send($user->id, 'fad fa-award', 'Achievement unlocked: '.$achievement->name(), $achievement->description());
 
     }
 
@@ -152,7 +152,7 @@ abstract class Achievement {
             $user->save();
         }
 
-        Notification::send($user->id, 'fad fa-award', 'Достижение разблокировано: '.$achievement->name(), $achievement->description());
+        Notification::send($user->id, 'fad fa-award', 'Achievement unlocked: '.$achievement->name(), $achievement->description());
 
     } 
 

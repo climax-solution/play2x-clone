@@ -1508,7 +1508,7 @@ public function randomName() {
         if (!is_null($withdraw)) {
             $withdraw->update(['status' => 1]);
             Notification::send($withdraw->user_id, 'fad fa-galaxy', 'test',
-                'Ваша выплата на сумму ' . $withdraw->amount . ' руб. была одобрена.', 'success');
+                'Your payment amount ' . $withdraw->amount . ' rub. was approved.', 'success');
         }
         return '1';
     }
@@ -1642,7 +1642,7 @@ public function randomName() {
         $fill_labels = function($days) use($game_id) {
             $out = '';
             for($i = 0; $i < $days; $i++)
-                $out .= '"'.($i > 0 ? $i .' д назад' : 'Сегодня').'"'. ($i == $days - 1 ? '' : ',');
+                $out .= '"'.($i > 0 ? $i .'d back' : 'Today').'"'. ($i == $days - 1 ? '' : ',');
             return $out;
         };
         $ids = (\App\User::where('chat_role', '<=', 3)->get()->pluck('id'));

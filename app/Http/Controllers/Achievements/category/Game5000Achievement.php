@@ -7,11 +7,11 @@ class Game5000Achievement extends Achievement {
     }
 
     public function name(): string {
-        return '5000 игр';
+        return '5000 games';
     }
 
     public function description(): string {
-        return 'Сыграйте 5000 игр';
+        return 'Play 5000 games';
     }
 
     public function category(): string {

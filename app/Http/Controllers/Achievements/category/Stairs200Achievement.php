@@ -7,11 +7,11 @@ class Stairs200Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Без помех';
+        return 'Stairs';
     }
 
     public function description(): string {
-        return 'Доберитесь до конца Stairs 200 раз';
+        return 'Reach the end of Stairs 200 times';
     }
 
     public function category(): string {

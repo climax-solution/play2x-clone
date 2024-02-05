@@ -11,7 +11,7 @@ class Dice1000Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Dice 1000 раз';
+        return 'Win 1000 times at Dice';
     }
 
     public function category(): string {

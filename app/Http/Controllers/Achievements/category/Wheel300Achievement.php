@@ -11,7 +11,7 @@ class Wheel300Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Wheel 300 раз';
+        return 'Win at Wheel 300 times';
     }
 
     public function category(): string {

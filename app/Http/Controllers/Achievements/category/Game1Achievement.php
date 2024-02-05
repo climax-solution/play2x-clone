@@ -7,11 +7,11 @@ class Game1Achievement extends Achievement {
     }
 
     public function name(): string {
-        return 'Первая игра';
+        return 'The first game';
     }
 
     public function description(): string {
-        return 'Сыграйте свою первую игру';
+        return 'Play your first game';
     }
 
     public function category(): string {

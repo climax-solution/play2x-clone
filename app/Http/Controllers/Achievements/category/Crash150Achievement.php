@@ -11,7 +11,7 @@ class Crash150Achievement extends Achievement {
     }
 
     public function description(): string {
-        return 'Выиграйте в Crash 150 раз';
+        return 'Win Crash 150 times';
     }
 
     public function category(): string {
