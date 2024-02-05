@@ -32,7 +32,7 @@
 
                             if($message['type'] == 1) {
                                 $type = 'Создание промокода';
-                                $description = $message['data']['code']. ', '.$message['data']['usages'].' использований, '.$message['data']['sum'].' руб.';
+                                $description = $message['data']['code']. ', '.$message['data']['usages'].' использований, '.$message['data']['sum'].' rub.';
                             }
 
                             if($message['type'] == 2) {
@@ -42,8 +42,8 @@
 
                             if($message['type'] == 3) {
                                 $type = 'Изменение промокода';
-                                $description = $message['data']['code']. ', '.$message['data']['usages'].' использований, '.$message['data']['sum'].' руб.
-                                    <br>Было: '.$message['data']['prev']['usages'].' использований, '.$message['data']['prev']['sum'].' руб';
+                                $description = $message['data']['code']. ', '.$message['data']['usages'].' использований, '.$message['data']['sum'].' rub.
+                                    <br>Было: '.$message['data']['prev']['usages'].' использований, '.$message['data']['prev']['sum'].' rub';
                             }
 
                             if($message['type'] == 4) {

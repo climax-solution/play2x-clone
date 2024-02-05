@@ -1,8 +1,8 @@
 @if(Auth::guest()) <script type="text/javascript">load('/');</script> @else
     <div class="game__wrapper tasks_page">
         <div class="bonus_header">
-            <p>Задания <i class="fas fa-info-circle fn_btn_info tooltip" title="Информация о заданиях" onclick="info('tasks')"></i></p>
-            <span>Принимайте участие в еженедельных заданиях и выигрывайте денежные призы!</span>
+            <p>Tasks <i class="fas fa-info-circle fn_btn_info tooltip" title="Information about tasks" onclick="info('tasks')"></i></p>
+            <span>Take part in weekly challenges and win cash prizes!</span>
         </div>
 
         @php
@@ -16,8 +16,8 @@
         @endforeach
         @if(sizeof($tasks) == 0)
             <div class="tasks_empty_wrapper">
-                <div class="tasks_empty-header">Сейчас нет заданий</div>
-                <div class="tasks_empty-text">Загляните сюда позже - они обязательно появятся!</div>
+                <div class="tasks_empty-header">There are no tasks right now</div>
+                <div class="tasks_empty-text">Check back later - they will definitely appear!</div>
             </div>
         @else
             <div class="tasks_wrapper">
@@ -46,12 +46,12 @@
                         </div>
                         <div class="task-content hidden-xs">
                             <div class="task-footer-item task-progress-item">
-                                <div>Начало</div>
+                                <div>Start</div>
                                 <div>{{date('d.m.Y', $task->start_time)}}
 								</div>
                             </div>
                             <div class="task-footer-item task-progress-item">
-                                <div>Завершение</div>
+                                <div>Completion</div>
                                 <div>{{date('d.m.Y', $task->end_time)}}</div>
                             </div>
                             <div class="task-progress-container">
@@ -68,21 +68,21 @@
                         </div>
                         <div class="task-footer">
                             <div class="task-footer-item">
-                                <div class="task-footer-item-header">Награда</div>
-                                <div>{{$task->reward}} руб.</div>
+                                <div class="task-footer-item-header">Reward</div>
+                                <div>{{$task->reward}} rub.</div>
                             </div>
                             <div class="task-footer-item hidden-xs">
-                                <div class="task-footer-item-header">Цена за 1 попытку</div>
+                                <div class="task-footer-item-header">Price for 1 attempt</div>
 								@if($task->price > 0)
-                                <div>{{$task->price}} руб.</div>
+                                <div>{{$task->price}} rub.</div>
 								@else
-								<div>Бесплано</div>
+								<div>For free</div>
 								@endif
                             </div>
                             @php($users = \App\User::whereRaw('JSON_CONTAINS(`tasks_completed`, \''.$task->id.'\', \'$\')')->get())
                             @if(sizeof($users) > 0)
                                 <div class="task-footer-item hidden-xs">
-                                    <div class="task-footer-item-header">Выполнили</div>
+                                    <div class="task-footer-item-header">Completed</div>
                                     <div>
                                         <div class="avatar-group">
                                             @php($i = 0)
@@ -92,7 +92,7 @@
                                                 </a>
                                                 @if($i > 5)
                                                     <a href="javascript:void(0)" class="avatar-media kt-media--sm kt-media--circle" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                       data-original-title="Выполнений: {{sizeof($users)}}">
+                                                       data-original-title="Executions: {{sizeof($users)}}">
                                                         <span>+{{sizeof($users) - 7}}</span>
                                                     </a>
                                                     @break
@@ -107,7 +107,7 @@
                         @php($any_tries = file_get_contents(url('/').'/task/has/'.Auth::user()->id.'/'.$task->id, false, stream_context_create($arrContextOptions)) == '1')
                         <div class="task-purchase-btn"
                              onclick="@if($any_tries) load('{{strtolower($game->name)}}'); @else task({{$task->id}}) @endif">
-                            @if($any_tries) Играть @else Начать задание @endif
+                            @if($any_tries) Play @else Start task @endif
                         </div>
                     </div>
                 </div>

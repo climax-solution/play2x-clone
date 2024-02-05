@@ -45,7 +45,7 @@
                                 <div class="kt-widget__details">
 
                                     <span class="kt-widget__subtitle">Цена</span>
-                                    <span class="kt-widget__value">{{$box->price}} <span>руб.</span></span>
+                                    <span class="kt-widget__value">{{$box->price}} <span>rub.</span></span>
                                 </div>
                             </div>
                         </div>

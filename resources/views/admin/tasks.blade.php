@@ -98,16 +98,16 @@
                             <div class="kt-widget__content">
                                 <div class="kt-widget__details">
                                     <span class="kt-widget__subtitle">Награда</span>
-                                    <span class="kt-widget__value">{{$task->reward}} <span>руб.</span></span>
+                                    <span class="kt-widget__value">{{$task->reward}} <span>rub.</span></span>
                                 </div>
                                 <div class="kt-widget__details">
                                     <span class="kt-widget__subtitle">Цена за 1 попытку</span>
-                                    <span class="kt-widget__value">{{$task->price}} <span>руб.</span></span>
+                                    <span class="kt-widget__value">{{$task->price}} <span>rub.</span></span>
                                 </div>
                                 @php($users = \App\User::whereRaw('JSON_CONTAINS(`tasks_completed`, \''.$task->id.'\', \'$\')')->get())
                                 @if(sizeof($users) > 0)
                                     <div class="kt-widget__details">
-                                        <span class="kt-widget__subtitle">Выполнили</span>
+                                        <span class="kt-widget__subtitle">Completed</span>
                                         <div class="kt-media-group">
                                             @php($i = 0)
                                             @foreach($users as $key => $value)
@@ -116,7 +116,7 @@
                                                 </a>
                                                 @if($i > 5)
                                                     <a href="javascript:void(0)" class="kt-media kt-media--sm kt-media--circle" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                       data-original-title="Выполнений: {{sizeof($users)}}">
+                                                       data-original-title="Executions: {{sizeof($users)}}">
                                                         <span>+{{sizeof($users) - 7}}</span>
                                                     </a>
                                                     @break

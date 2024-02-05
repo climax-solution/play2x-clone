@@ -1,9 +1,9 @@
 <div>
-    <div id="__info_title" style="display: none">Честная игра</div>
+    <div id="__info_title" style="display: none">Fair game</div>
 
     <div class="info-container">
         <div class="info-block">
-            <div class="info-block-title">Клиентский хэш</div>
+            <div class="info-block-title">Client hash</div>
             <div class="info-block-content">
                 Хэш, который может быть изменен вами.
                 <br>

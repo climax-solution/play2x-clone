@@ -4,7 +4,7 @@
     <div class="game__wrapper">
         <div class="bonus_header">
             <p style="margin-bottom: unset">
-                Кейсы
+                Cases
             </p>
         </div>
         <div class="box-container">

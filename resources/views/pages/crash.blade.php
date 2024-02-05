@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="b_label">
-                        Сумма ставки
+                    Bet amount
                     </div>
                 </div>
                 <div class="col-xs-12 mt10">
@@ -32,7 +32,7 @@
 				<br>
 				<div class="col-xs-12">
                     <div class="b_label" id="autoOut-text">
-                        Авто вывод
+                    Auto output
                     </div>
                 </div>
 				<div class="col-xs-12">
@@ -47,21 +47,21 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 mt5">
-                <div class="g_s g_btn" onclick="crash()" id="play"><span id="bet_btn">Играть</span></div>
+                <div class="g_s g_btn" onclick="crash()" id="play"><span id="bet_btn">Play</span></div>
             </div>
 			@include('pages.game_task', ['game_id' => 3])
         </div>
         <div class="g_sidebar_footer">
             <div class="g_sidebar_footer_button" onclick="info('crash')">
-                <i class="fas fa-info-circle tooltip" title="Информация о игре"></i>
+                <i class="fas fa-info-circle tooltip" title="Game information"></i>
             </div>
             <div class="g_sidebar_footer_button" onclick="provablyfair()">
-                <i class="fad fa-shield-alt tooltip" title="Честная игра"></i>
+                <i class="fad fa-shield-alt tooltip" title="Fair game"></i>
             </div>
 						            <div class="g_sidebar_footer_button" onclick="setAudioGame(!isAudioGame)">
 						<script>$(document).ready(function(){isAudioGame?($("#game_audio_on").fadeIn(0),$("#game_audio_off").fadeOut(0)):($("#game_audio_off").fadeIn(0),$("#game_audio_on").fadeOut(0))});</script>
-                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Выключить звук"></div>
-				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Включить звук"></div>
+                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Mute"></div>
+				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Unmute"></div>
             </div>
         </div>
     </div>
@@ -99,7 +99,7 @@
 }
 		</style>
         <div class="c_f" style="display:none">
-		<div class="tip_badge"><div class="tip_text" style="display:none">ДЕМО-РЕЖИМ</div></div>
+		<div class="tip_badge"><div class="tip_text" style="display:none">DEMO MODE</div></div>
             <p class="c_h" id="game_multiplier">x0.00</p>
             <p class="c_p" id="game_profit">+0.00 &nbsp;<i class="fad fa-coins"></i></p>
         </div>

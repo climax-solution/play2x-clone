@@ -60,7 +60,7 @@
 				
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Как играть?</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
-					Перейдите на страницу любой игры, нажмите на кнопку с иконкой <i class="fas fa-info-circle tooltip" title="Информация о игре"></i>, перед вами откроется окно с инструкцией к игре, затем укажите сумму ставки и нажмите "Играть".
+					Перейдите на страницу любой игры, нажмите на кнопку с иконкой <i class="fas fa-info-circle tooltip" title="Game information"></i>, перед вами откроется окно с инструкцией к игре, затем укажите сумму ставки и нажмите "Играть".
 				</div>
 				
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Демо-режим</div>
@@ -86,12 +86,12 @@
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Как конвертируется внутриигровая валюта?</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
-					1 монета = 1 рубль.
+					1 монета = 1 rubль.
 				</div>
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-9" aria-controls="ui-id-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Как пополнить счет?</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-10" aria-labelledby="ui-id-9" role="tabpanel" aria-hidden="true" style="display: none;">
-					Перейдите в свой <a onclick="$('.md-wallet').toggleClass('md-show', true)" class="colored-link">Кошелек</a>, выберите сумму и способ оплаты, ознакомьтесь с комиссиями и нажмите кнопку "Оплатить".
+					Перейдите в свой <a onclick="$('.md-wallet').toggleClass('md-show', true)" class="colored-link">Wallet</a>, выберите сумму и способ оплаты, ознакомьтесь с комиссиями и нажмите кнопку "Оплатить".
 				</div>
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-11" aria-controls="ui-id-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Я пополнил счет, а деньги не пришли</div>
@@ -101,7 +101,7 @@
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-13" aria-controls="ui-id-14" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Как вывести деньги?</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-14" aria-labelledby="ui-id-13" role="tabpanel" aria-hidden="true" style="display: none;">
-					Перейдите в свой <a onclick="$('.md-wallet').toggleClass('md-show', true)" class="colored-link">Кошелек</a>, выберите вкладку "Вывод", выберите способ и сумму вывода, введите свой кошелек, ознакомьтесь с комиссиями и нажмите кнопку "Вывести".
+					Перейдите в свой <a onclick="$('.md-wallet').toggleClass('md-show', true)" class="colored-link">Wallet</a>, выберите вкладку "Вывод", выберите способ и сумму вывода, введите свой кошелек, ознакомьтесь с комиссиями и нажмите кнопку "Withdraw".
 				</div>
 
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-15" aria-controls="ui-id-16" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>При выводе появляется ошибка</div>
@@ -132,7 +132,7 @@
 				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-21" aria-controls="ui-id-22" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Нужно ли пополнять счет для вывода?</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-22" aria-labelledby="ui-id-21" role="tabpanel" aria-hidden="true" style="display: none;">
 					<p class="help-a__text">
-						Для вывода вам достаточно иметь пополнений на 50 рублей. 
+						Для вывода вам достаточно иметь пополнений на 50 rubлей. 
 					</p>
 				</div>
 
@@ -171,7 +171,7 @@
 					</p>
 				</div>
 
-				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Честная игра</div>
+				<div class="help-q ui-accordion-header ui-corner-top ui-accordion-header-collapsed  ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Fair game</div>
 				<div class="help-a ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
 					Генератор случайных чисел создает доĸазуемые и абсолютно честные случайные числа, ĸоторые используются для определения результата ĸаждой игры, сыгранной на сайте. Каждый пользователь может проверить исход любой игры полностью детерминированным способом. Предоставляя один параметр - ĸлиентсĸий хэш, на входы генератора случайных чисел, {{$settings->namesite}} не может манипулировать результатами в свою пользу. Генератор случайных чисел {{$settings->namesite}} позволяет ĸаждой игре запрашивать любое ĸоличество случайных чисел из заданного начального числа ĸлиента, начального числа сервера и одноразового номера. Подробнее о том, ĸаĸ это работает вы можете узнать на странице честной игры.
 				</div>

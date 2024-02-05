@@ -6,10 +6,10 @@
                     <i class="icon-keno"></i>
                     <span>Keno</span>
                 </div>
-				<div class="game-sidebar-tabs"><div class="game-sidebar-tab active" onclick="setMode('default')" data-tab="default">Ручные</div><div class="game-sidebar-tab" onclick="setMode('auto')" data-tab="auto">Авто</div></div>
+				<div class="game-sidebar-tabs"><div class="game-sidebar-tab active" onclick="setMode('default')" data-tab="default">Manual</div><div class="game-sidebar-tab" onclick="setMode('auto')" data-tab="auto">Auto</div></div>
                 <div class="col-xs-12">
                     <div class="b_label">
-                        Сумма ставки
+                        Bet amount
                     </div>
                 </div>
                 <div class="col-xs-12 mt10">
@@ -61,13 +61,13 @@
 }
 				</style>
                 <div class="buttons-2">
-                    <div onclick="autopick()" class="buttons-2-selected"><i class="fas fa-magic"></i>&nbsp; Авто-выбор</div>
-                    <div onclick="clearkeno()" class="">Очистить</div>
+                    <div onclick="autopick()" class="buttons-2-selected"><i class="fas fa-magic"></i>&nbsp; Auto-select</div>
+                    <div onclick="clearkeno()" class="">Clear</div>
                 </div>
             </div>
 							<div class="col-xs-12 mt5" id="gamestext" style="display: none;">
                 <div class="b_label">
-                    Количество игр
+                    Number of games
                 </div>
             </div>
             <div class="col-xs-12 mb10 mt5"  id="gamesvalue" style="display: none;">
@@ -77,46 +77,46 @@
                     <div data-games="50">50</div>
                     <div data-games="240"><i class="far fa-infinity"></i></div>
                     <div id="change_games">
-                        <span>Изменить</span>
+                        <span>Change</span>
                         <input data-number-input="true" class="bomb_input dn" value="5" placeholder="5-240">
                     </div>
                 </div>
             </div>
              <div class="col-xs-12" id="gamesvictory" style="display: none;">
                 <div class="b_label">
-                    Остановить при выигрыше
+                    Stop when winning
                 </div>
             </div>
 			<div class="col-xs-12 mb10 mt5" id="gamesvictoryvalue" style="display: none;">
                 <div class="buttons-3">
-                    <div data-victory="0" class="buttons-3-selected">Да</div>
-                    <div data-victory="1" class="">Нет</div>
-					<div data-victory="2" class="">x5</div>
+                    <div data-victory="0" class="buttons-3-selected">Yes</div>
+                    <div data-victory="1" class="">No</div>
+					<div data-victory="2" class="">cs5</div>
                 </div>
             </div>
             </div>
             <div class="col-xs-12 col-sm-12 mt5">
-                <div class="g_s g_btn" onclick="keno()" id="play"><span id="bet_btn">Играть</span></div>
+                <div class="g_s g_btn" onclick="keno()" id="play"><span id="bet_btn">Play</span></div>
             </div>
 						<div class="col-xs-12 col-sm-12 mt5">
-                <div class="g_s g_btn" onclick="kenoauto()" id="auto" style="display: none;"><span id="bet_btn_auto">Запустить</span></div>
+                <div class="g_s g_btn" onclick="kenoauto()" id="auto" style="display: none;"><span id="bet_btn_auto">Launch</span></div>
             </div>
         </div>
         <div class="g_sidebar_footer">
             <div class="g_sidebar_footer_button" onclick="info('keno')">
-                <i class="fas fa-info-circle tooltip" title="Информация о игре"></i>
+                <i class="fas fa-info-circle tooltip" title="Game information"></i>
             </div>
 			            <div class="g_sidebar_footer_button" onclick="setQuickGame(!isQuick)">
 			<script>$(document).ready(function(){$('#game_quick').toggleClass('demo_active', isQuick)});</script>
-                <i class="fas fa-bolt tooltip" id="game_quick" title="Быстрая игра"></i>
+                <i class="fas fa-bolt tooltip" id="game_quick" title="Quick game"></i>
             </div>
             <div class="g_sidebar_footer_button" onclick="provablyfair()">
-                <i class="fad fa-shield-alt tooltip" title="Честная игра"></i>
+                <i class="fad fa-shield-alt tooltip" title="Fair game"></i>
             </div>
 						            <div class="g_sidebar_footer_button" onclick="setAudioGame(!isAudioGame)">
 						<script>$(document).ready(function(){isAudioGame?($("#game_audio_on").fadeIn(0),$("#game_audio_off").fadeOut(0)):($("#game_audio_off").fadeIn(0),$("#game_audio_on").fadeOut(0))});</script>
-                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Выключить звук"></div>
-				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Включить звук"></div>
+                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Mute"></div>
+				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Unmute"></div>
             </div>
         </div>
     </div>
@@ -323,13 +323,13 @@ transform:translateX(100%);
 	</style>
 		<div class="outcome-window outcome-window_won outcome-window_centered">
                                                 <div class="outcome-window__coeff outcome-window_won__coeff">x1.05</div>
-                                                <div class="outcome-window__text outcome-window_won__text">Вы выиграли
+                                                <div class="outcome-window__text outcome-window_won__text">You won
                                                         <span class="outcome-window_won-wrapper"><span class="outcome-window_won__sum">1050</span>
                                                                 <span class="myicon-coins"></span></span></div>
                                         </div>
 										<div class="outcome-window-demo outcome-window_won-demo outcome-window_centered">
-            <div class="tip_badge"><div class="tip_text">ДЕМО-РЕЖИМ</div></div>                                    <div class="outcome-window__coeff-demo outcome-window_won__coeff-demo">x1.07</div>
-                                                <div class="outcome-window__text outcome-window_won__text">Вы выиграли
+            <div class="tip_badge"><div class="tip_text">DEMO MODE</div></div>                                    <div class="outcome-window__coeff-demo outcome-window_won__coeff-demo">x1.07</div>
+                                                <div class="outcome-window__text outcome-window_won__text">You won
                                                         <span class="outcome-window_won-wrapper-demo"><span class="outcome-window_won__sum">107.00</span>
                                                                 <span class="myicon-coins"></span></span></div>
                                         </div>

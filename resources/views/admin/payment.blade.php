@@ -44,11 +44,11 @@
                                             </div>
                                         </div>
                                                                                 <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Сумма пополнения</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Top up amount</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="input-group" id="money_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="fad fa-coins"></i></span></div>
-                                                    <input oninput="delayedv('#money', function(v) { send('#money_grp', '/admin/change_amount_payment/{{$payment->id}}/'+v) })" id="money" type="text" class="form-control" value="{{$payment->amount}}" placeholder="Сумма пополнения" aria-describedby="basic-addon1">
+                                                    <input oninput="delayedv('#money', function(v) { send('#money_grp', '/admin/change_amount_payment/{{$payment->id}}/'+v) })" id="money" type="text" class="form-control" value="{{$payment->amount}}" placeholder="Top up amount" aria-describedby="basic-addon1">
                                                 </div>
                                             </div>
                                         </div>

@@ -10,7 +10,7 @@
                                 <span style="width: 50px">#</span>
                             </th>
                             <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 200px;">Фейк</span></th>
-                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 181px;">Уровень</span></th>
+                            <th class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 181px;">Level</span></th>
                             <th data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 80px;">Действия</span></th>
                         </tr>
                     </thead>
@@ -53,7 +53,7 @@
                     <input type="text" class="form-control" id="code" placeholder="Имя">
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label">Уровень:</label>
+                    <label class="form-control-label">Level:</label>
                     <input type="text" class="form-control" id="sum" placeholder="От 1 до 10">
                 </div>
             </div>

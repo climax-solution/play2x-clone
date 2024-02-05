@@ -5,14 +5,14 @@
                 <div class="carousel-background" style="background-image: url(/img/esport.jpg);"></div>
                 <div class="carousel-content">
                     <div class="slide-header">
-                        Промокоды
+                        Promo codes
                     </div>
                     <div class="slide-content">
-                        Хочешь быть в курсе новостей? Получать бесплатные бонусы? Промокоды, розыгрыши и многое другое.<br>
-                        Заходи к нам в группу вк - <a class="ll" href="https://vk.com/uptouch" target="_blank">UpTouch</a>!
+                        Do you want to stay up to date with the news? Receive free bonuses? Promotional codes, sweepstakes and much more.<br>
+                        Come to our VK group - <a class="ll" href="https://vk.com/uptouch" target="_blank">UpTouch</a>!
                     </div>
                 </div>
-                <button class="slide-button" onclick="window.open('https://vk.com/uptouch', '_blank')">Перейти</button>
+                <button class="slide-button" onclick="window.open('https://vk.com/uptouch', '_blank')">Go</button>
             </div>
         </div>
         <div>
@@ -20,13 +20,13 @@
                 <div class="carousel-background" style="background-image: url(/img/casino.jpg);"></div>
                 <div class="carousel-content">
                     <div class="slide-header">
-                        Блеск в простоте
+                        Brilliance in simplicity
                     </div>
                     <div class="slide-content">
-                        Испытайте пик социальных азартных игр,<br>сочетающую атмосферу реального казино с простотой ваших любимых игр.
+                        Experience the peak of social gambling, combining the atmosphere of a real casino with the simplicity of your favorite games.
                     </div>
                 </div>
-                <button class="slide-button" @if(Auth::guest()) onclick="$('#b_si').click();" @else onclick="load('/bonus')" @endif>Начать играть</button>
+                <button class="slide-button" @if(Auth::guest()) onclick="$('#b_si').click();" @else onclick="load('/bonus')" @endif>Begin to play</button>
             </div>
         </div>
     </div> 
@@ -40,20 +40,20 @@
                 </div>
                 <div class="welcome_Left__JPT6w">
 
-                    <div class="welcome_Intro__3Zo-O">UpTouch – Моментальные игры с выводом денег. Лучший лицензированный сайт для отдыха заработка.
+                    <div class="welcome_Intro__3Zo-O">UpTouch – Instant games with money withdrawal. The best licensed site for earning money on vacation.
                     </div>
                     <div class="welcome_Counters__2BjGU">
                         <div class="welcome_Item__3ifzJ">
-                            <div class="welcome_Label__2pEjZ">Игроков</div>{{\DB::table('users')->count() + 15732}}</div>
+                            <div class="welcome_Label__2pEjZ">Players</div>{{\DB::table('users')->count() + 15732}}</div>
                         <div class="welcome_Item__3ifzJ">
-                            <div class="welcome_Label__2pEjZ">Выведено</div>{{\DB::table('withdraw')->where('status', 1)->sum('amount') + $settings->fakesumwithdraw}}</div>
+                            <div class="welcome_Label__2pEjZ">Withdrawn</div>{{\DB::table('withdraw')->where('status', 1)->sum('amount') + $settings->fakesumwithdraw}}</div>
                     </div>
                      <div class="welcome_Counters__2BjGU">
 
                     </div>
-                     <div class="welcome_Registration__3VnWT"> <span>БОНУС ПРИ РЕГИСТРАЦИИ</span>
+                     <div class="welcome_Registration__3VnWT"> <span>BONUS ON REGISTRATION</span>
                     <a href="javascript:void(0)" @if(Auth::guest()) onclick="$('#b_si').click();" @else onclick="load('/')" @endif class="btn22">
-                  			НАЧАТЬ ИГРАТЬ
+                        BEGIN TO PLAY
 
                    		</a>
                     </div>
@@ -114,7 +114,7 @@
     display: inline-block;
 }
   </style>
-	<div class="landing_Caption"><span>Наши игры</span></div>
+	<div class="landing_Caption"><span>Our games</span></div>
   <!---  <div class="col-xs-12">
         <div class="i_game i_game-bottle event_container" style="background-image: url(/img/game/svg/plinko.svg)" onclick="load('/battle')">
             <div class="i_game-name">
@@ -307,7 +307,7 @@
             <div class="i_game-name">
                 <i class="fad fa-box-open"></i>
                 <div class="gg_sidebar-notification">1</div>
-                Кейсы
+                Cases
             </div>
 			<div class="i_game-stat tooltip" title="Онлайн в игре">
                 <i class="fas i_icon-stat fa-user"></i>
@@ -321,8 +321,8 @@
             <div class="i_game_overlay-bonus i_game_overlay-bonus_2"></div>
             <div class="i_game_overlay-bonus i_game_overlay-bonus_3 hidden-xs"></div>
             <div class="i_game-name bonus_banner_desc" id="bonus_banner_name">
-                <i class="fad fa-coins i_y_i" style="margin-right: 5px"></i><span class="i_y_i">Бонус</span><br>
-                Получи денежный бонус<br>бесплатно для начала игры на UpTouch!
+                <i class="fad fa-coins i_y_i" style="margin-right: 5px"></i><span class="i_y_i">Bonus</span><br>
+                Get a cash bonus<br>for free to start playing on UpTouch!
             </div>
         </div>
     </div>
@@ -330,10 +330,10 @@
         <div class="i_game i_game-vk" onclick="var win = window.open('https://vk.com/uptouch', '_blank'); win.focus()" id="vk_banner">
             <i class="fab fa-vk i_game_overlay-vk"></i>
             <div class="i_game-name vk_banner_desc" id="vk_banner_name">
-                <i class="fab fa-vk i_b_i"></i><span class="i_b_i">ВКонтакте</span><br>
-                Присоединяйся к группе ВКонтакте<br>
-                и будь вкурсе всех новостей,<br>
-                а так же специальных промокодов!
+                <i class="fab fa-vk i_b_i"></i><span class="i_b_i">In contact with</span><br>
+                Join the VKontakte group<br>
+                and stay up to date with all the news<br>
+                as well as special promotional codes!
             </div>
         </div>
     </div>

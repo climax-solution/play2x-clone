@@ -6,10 +6,10 @@
                     <i class="fad fa-circle-notch"></i>
                     <span>Wheel</span>
                 </div>
-				<div class="game-sidebar-tabs"><div class="game-sidebar-tab active" onclick="setMode('default')" data-tab="default">Ручные</div><div class="game-sidebar-tab" onclick="setMode('auto')" data-tab="auto">Авто</div></div>
+				<div class="game-sidebar-tabs"><div class="game-sidebar-tab active" onclick="setMode('default')" data-tab="default">Manual</div><div class="game-sidebar-tab" onclick="setMode('auto')" data-tab="auto">Auto</div></div>
                 <div class="col-xs-12">
                     <div class="b_label">
-                        Сумма ставки
+                        Bet amount
                     </div>
                 </div>
                 <div class="col-xs-12 mt10">
@@ -37,9 +37,9 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="bet_profit">
-                        Выигрыш: <span id="bet_profit"></span> &nbsp;<i class="fad fa-coins"></i>
+                        Winning: <span id="bet_profit"></span> &nbsp;<i class="fad fa-coins"></i>
                         <div class="hidden-xs mt5">
-                            Цвет: <span id="w_color" class="bet_profit-error">Не выбран</span>
+                        Color: <span id="w_color" class="bet_profit-error">Not selected</span>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
             </div>
 							<div class="col-xs-12 mt5" id="gamestext" style="display: none;">
                 <div class="b_label">
-                    Количество игр
+                    Number of games
                 </div>
             </div>
             <div class="col-xs-12 mb10 mt5"  id="gamesvalue" style="display: none;">
@@ -74,45 +74,45 @@
                     <div data-games="50">50</div>
                     <div data-games="240"><i class="far fa-infinity"></i></div>
                     <div id="change_games">
-                        <span>Изменить</span>
+                        <span>Change</span>
                         <input data-number-input="true" class="bomb_input dn" value="5" placeholder="5-240">
                     </div>
                 </div>
             </div>
              <div class="col-xs-12" id="gamesvictory" style="display: none;">
                 <div class="b_label">
-                    Остановить при выигрыше
+                    Stop when winning
                 </div>
             </div>
 			<div class="col-xs-12 mb10 mt5" id="gamesvictoryvalue" style="display: none;">
                 <div class="buttons-3">
-                    <div data-victory="0" class="buttons-3-selected">Да</div>
-                    <div data-victory="1" class="">Нет</div>
+                    <div data-victory="0" class="buttons-3-selected">Yes</div>
+                    <div data-victory="1" class="">No</div>
 					<div data-victory="2" class="">x5</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 mt5">
-                <div class="g_s g_btn" onclick="wheel()" id="play">Играть</div>
+                <div class="g_s g_btn" onclick="wheel()" id="play">Play</div>
             </div>
 			<div class="col-xs-12 col-sm-12 mt5">
-                <div class="g_s g_btn" onclick="wheelauto()" id="auto" style="display: none;"><span id="bet_btn_auto">Запустить</span></div>
+                <div class="g_s g_btn" onclick="wheelauto()" id="auto" style="display: none;"><span id="bet_btn_auto">Run</span></div>
             </div>
         </div>
         <div class="g_sidebar_footer">
             <div class="g_sidebar_footer_button" onclick="info('wheel')">
-                <i class="fas fa-info-circle tooltip" title="Информация о игре"></i>
+                <i class="fas fa-info-circle tooltip" title="Game information"></i>
             </div>
             <div class="g_sidebar_footer_button" onclick="setQuickGame(!isQuick)">
 			<script>$(document).ready(function(){$('#game_quick').toggleClass('demo_active', isQuick)});</script>
-                <i class="fas fa-bolt tooltip" id="game_quick" title="Быстрая игра"></i>
+                <i class="fas fa-bolt tooltip" id="game_quick" title="Quick game"></i>
             </div>
             <div class="g_sidebar_footer_button" onclick="provablyfair()">
-                <i class="fad fa-shield-alt tooltip" title="Честная игра"></i>
+                <i class="fad fa-shield-alt tooltip" title="Fair game"></i>
             </div>
 									            <div class="g_sidebar_footer_button" onclick="setAudioGame(!isAudioGame)">
 						<script>$(document).ready(function(){isAudioGame?($("#game_audio_on").fadeIn(0),$("#game_audio_off").fadeOut(0)):($("#game_audio_off").fadeIn(0),$("#game_audio_on").fadeOut(0))});</script>
-                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Выключить звук"></div>
-				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Включить звук"></div>
+                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Mute"></div>
+				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Unmute"></div>
             </div>
         </div>
     </div>
@@ -146,7 +146,7 @@
 }
 		</style>
         <div class="wheel_game_result" style="display: none">
-		<div class="tip_badge"><div class="tip_text" style="display:none">ДЕМО-РЕЖИМ</div></div>
+		<div class="tip_badge"><div class="tip_text" style="display:none">DEMO MODE</div></div>
             <div class="mul"></div>
             <div class="te"></div>
         </div>

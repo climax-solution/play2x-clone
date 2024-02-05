@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="b_label">
-                        Сумма ставки
+                        Bet amount
                     </div>
                 </div>
                 <div class="col-xs-12 mt10">
@@ -33,33 +33,33 @@
             <div class="col-xs-12 coin-select">
                 <div class="col-xs-6 coin" style="display: none" onclick="flip('red')">
                     <div class="cf cf_red"></div><br>
-                    <span>Красный</span>
+                    <span>Red</span>
                 </div>
                 <div class="col-xs-6 coin" style="display: none" onclick="flip('black')">
                     <div class="cf cf_black"></div><br>
-                    <span>Черный</span>
+                    <span>Black</span>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 mt10">
-                <div class="g_s g_btn" onclick="coinflip()" id="play"><span id="bet_btn">Играть</span></div>
+                <div class="g_s g_btn" onclick="coinflip()" id="play"><span id="bet_btn">Play</span></div>
             </div>
 			@include('pages.game_task', ['game_id' => 4])
         </div>
         <div class="g_sidebar_footer">
             <div class="g_sidebar_footer_button" onclick="info('coinflip')">
-                <i class="fas fa-info-circle tooltip" title="Информация о игре"></i>
+                <i class="fas fa-info-circle tooltip" title="Game information"></i>
             </div>
             <div class="g_sidebar_footer_button" onclick="setQuickGame(!isQuick)">
 						<script>$(document).ready(function(){$('#game_quick').toggleClass('demo_active', isQuick)});</script>
-                <i class="fas fa-bolt tooltip" id="game_quick" title="Быстрая игра"></i>
+                <i class="fas fa-bolt tooltip" id="game_quick" title="Quick game"></i>
             </div>
             <div class="g_sidebar_footer_button" onclick="provablyfair()">
-                <i class="fad fa-shield-alt tooltip" title="Честная игра"></i>
+                <i class="fad fa-shield-alt tooltip" title="Fair game"></i>
             </div>
 						            <div class="g_sidebar_footer_button" onclick="setAudioGame(!isAudioGame)">
 						<script>$(document).ready(function(){isAudioGame?($("#game_audio_on").fadeIn(0),$("#game_audio_off").fadeOut(0)):($("#game_audio_off").fadeIn(0),$("#game_audio_on").fadeOut(0))});</script>
-                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Выключить звук"></div>
-				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Включить звук"></div>
+                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Mute"></div>
+				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Unmute"></div>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@
         <div class="cf_info">
             <div class="cf_s">
                 <span id="games">0</span>
-                <p>серия</p>
+                <p>series</p>
             </div>
 			<style>
 			.side-icon-a {
@@ -96,7 +96,7 @@
             </div>
             <div class="cf_s cf_s_c">
                 <span>x</span><span id="mul">0</span><span>.</span><span id="mul_m">0</span>
-                <p>коэфф.</p>
+                <p>coefficient.</p>
             </div>
         </div>
         <div class="cf_history"></div>

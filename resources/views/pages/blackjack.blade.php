@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="b_label">
-                        Сумма ставки
+                        Bet amount
                     </div>
                 </div>
                 <div class="col-xs-12 mt10">
@@ -33,47 +33,47 @@
             <div style="display: none" id="blackjack_controls">
                 <div class="insurance" style="display: none">
                     <div class="insurance-container">
-                        <div><i class="fas fa-question-circle"></i> Желаете страховку?</div>
+                        <div><i class="fas fa-question-circle"></i> Would you like insurance?</div>
                         <div class="insurance-desc">
-                            <p>Она позволяет застраховаться от возможной руки дилера с блэкджеком.</p>
-                            <p>Страховка стоит половину вашей ставки.</p>
+                            <p>It allows you to insure yourself against a possible dealer's hand with blackjack.</p>
+                            <p>Insurance costs half your rate.</p>
                         </div>
 
                         <div class="col-xs-12 coin-select">
-                            <div class="blackjack_button" id="insurance_accept">Принять</div>
-                            <div class="blackjack_button" id="insurance_cancel">Отказаться</div>
+                            <div class="blackjack_button" id="insurance_accept">Accept</div>
+                            <div class="blackjack_button" id="insurance_cancel">Refuse</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 coin-select">
                     <div class="hilo-select" id="stand">
                         <i class="fas fa-hand-paper"></i>
-                        <div class="hilo-mul">Стоп</div>
+                        <div class="hilo-mul">Stop</div>
                     </div>
                     <div class="hilo-select" id="hit">
                         <i class="fas fa-spade"></i>
-                        <div class="hilo-mul">Взять еще</div>
+                        <div class="hilo-mul">Take some more</div>
                     </div>
                 </div>
                 <div class="col-xs-12 coin-select">
-                    <div class="blackjack_button bb_disabled" id="double">Удвоить</div>
+                    <div class="blackjack_button bb_disabled" id="double">Double</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 mt5">
-                <div class="g_s g_btn" id="play"><span id="bet_btn">Играть</span></div>
+                <div class="g_s g_btn" id="play"><span id="bet_btn">Play</span></div>
             </div>
         </div>
         <div class="g_sidebar_footer">
             <div class="g_sidebar_footer_button" onclick="info('blackjack')">
-                <i class="fas fa-info-circle tooltip" title="Информация о игре"></i>
+                <i class="fas fa-info-circle tooltip" title="Game information"></i>
             </div>
             <div class="g_sidebar_footer_button" onclick="provablyfair()">
-                <i class="fad fa-shield-alt tooltip" title="Честная игра"></i>
+                <i class="fad fa-shield-alt tooltip" title="Fair game"></i>
             </div>
 						            <div class="g_sidebar_footer_button" onclick="setAudioGame(!isAudioGame)">
 						<script>$(document).ready(function(){isAudioGame?($("#game_audio_on").fadeIn(0),$("#game_audio_off").fadeOut(0)):($("#game_audio_off").fadeIn(0),$("#game_audio_on").fadeOut(0))});</script>
-                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Выключить звук"></div>
-				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Включить звук"></div>
+                <div class="fad fa-volume-up tooltip" id="game_audio_on" style="display:none" title="Mute"></div>
+				<div class="fad fa-volume-slash tooltip" id="game_audio_off" style="display:none" title="Unmute"></div>
             </div>
         </div>
     </div>

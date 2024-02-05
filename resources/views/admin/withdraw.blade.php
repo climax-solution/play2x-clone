@@ -48,7 +48,7 @@
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="input-group" id="amount_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="fad fa-coins"></i></span></div>
-                                                    <input oninput="delayedv('#amount', function(v) { send('#amount_grp', '/admin/change_amount/{{$withdraw->id}}/'+v) })" id="amount" type="text" class="form-control" value="{{$withdraw->amount}}" placeholder="Сумма вывода" aria-describedby="basic-addon1">
+                                                    <input oninput="delayedv('#amount', function(v) { send('#amount_grp', '/admin/change_amount/{{$withdraw->id}}/'+v) })" id="amount" type="text" class="form-control" value="{{$withdraw->amount}}" placeholder="Withdrawal amount" aria-describedby="basic-addon1">
                                                 </div>
                                             </div>
                                         </div>

@@ -68,7 +68,7 @@
                                     </a>
                                 </div>
                                 <div class="kt-widget__info">
-                                    <span class="kt-widget__label">Уровень:</span>
+                                    <span class="kt-widget__label">Level:</span>
                                     <a href="javascript:void(0)" class="kt-widget__data">
                                         {{$user->level}}
                                     </a>
@@ -84,12 +84,12 @@
                                 <div class="kt-widget__info">
                                     <span class="kt-widget__label">Депозит:</span>
                                     <a href="javascript:void(0)" class="kt-widget__data">
-                                        {{$user->deposit}} руб.
+                                        {{$user->deposit}} rub.
                                     </a>
                                 </div>
                                 <div class="kt-widget__info">
                                     <span class="kt-widget__label">Выиграно:</span>
-                                    <span class="kt-widget__data">{{\App\Game::where('user_id', $user->id)->where('status', 1)->where('demo', 0)->sum('win')}} руб.</span>
+                                    <span class="kt-widget__data">{{\App\Game::where('user_id', $user->id)->where('status', 1)->where('demo', 0)->sum('win')}} rub.</span>
                                 </div>
                                 <div class="kt-widget__info">
                                     <button id="ban" class="btn @if($user->global_ban == 0) btn-primary @else btn-danger @endif btn-block mt-2"
@@ -180,7 +180,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Уровень</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Level</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <div class="input-group" id="lvl_grp">
                                                     <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-code-branch"></i></span></div>

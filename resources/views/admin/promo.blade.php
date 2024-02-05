@@ -52,7 +52,7 @@
                                             {{$promo->code}}
                                         </a>
                                         <span class="kt-widget__desc" style="font-size: 1.7rem">
-                                        {{$promo->sum}} руб.
+                                        {{$promo->sum}} rub.
                                     </span>
                                     </div>
                                 </div>

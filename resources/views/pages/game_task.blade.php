@@ -32,11 +32,11 @@
         <div class="col-xs-12">
             <div class="game-task-container" @if($tries > 0) data-task-id="{{$task->id}}" @endif>
                 @if($tries == 0)
-                    <p>Доступно задание<br><small>Для участия в задании необходимо приобрести попытки</small></p>
-                    <a href="javascript:void(0)" class="ll" onclick="load('/tasks')">Перейти на страницу</a>
+                    <p>Task available<br><small>To participate in the task you must purchase attempts</small></p>
+                    <a href="javascript:void(0)" class="ll" onclick="load('/tasks')">Go to page</a>
                 @else
                     <p>
-                        Задание:<br>
+                        Exercise:<br>
                         <small>{{file_get_contents(url('/').'/task/description/'.$task->id, false, stream_context_create($arrContextOptions))}}</small>
                     </p>
                     @php

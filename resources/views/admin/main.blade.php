@@ -57,7 +57,7 @@
                                 <div class="kt-widget17__items">
                                     <div class="kt-widget17__item">
                                         <span class="kt-widget17__title">
-                                            {{$wrap($today)}} руб.
+                                            {{$wrap($today)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
                                             Сегодня
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="kt-widget17__item">
                                         <span class="kt-widget17__title">
-                                            {{$wrap($week)}} руб.
+                                            {{$wrap($week)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
                                             Неделя
@@ -75,7 +75,7 @@
                                 <div class="kt-widget17__items">
                                     <div class="kt-widget17__item">
                                         <span class="kt-widget17__title">
-                                            {{$wrap($month)}} руб.
+                                            {{$wrap($month)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
                                             Месяц
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="kt-widget17__item">
                                         <span class="kt-widget17__title">
-                                            {{$wrap($summary)}} руб.
+                                            {{$wrap($summary)}} rub.
                                         </span>
                                         <span class="kt-widget17__subtitle">
                                             Все время
@@ -140,10 +140,10 @@
                                                 </div>
                                                 <div class="kt-widget4__info">
                                                     <a href="javascript:void(0)" onclick="load('/admin/user?id={{$live->user->id}}')" class="kt-widget4__username">
-                                                        {{$live->user->username}} <i class="fas fa-angle-right"></i> {{$live->user->money}} руб.
+                                                        {{$live->user->username}} <i class="fas fa-angle-right"></i> {{$live->user->money}} rub.
                                                     </a>
                                                     <p class="kt-widget4__text" style="font-family: 'Open Sans', sans-serif">
-                                                        {{$live->amount}} руб. <i class="fal fa-angle-right"></i> {{\App\Http\Controllers\GeneralController::formatDate(strtotime($live->created_at))}}
+                                                        {{$live->amount}} rub. <i class="fal fa-angle-right"></i> {{\App\Http\Controllers\GeneralController::formatDate(strtotime($live->created_at))}}
                                                         <br>
                                                         @php 
 														$s = '' 
@@ -239,7 +239,7 @@
                                                     {{$live->user->username}}
                                                 </a>
                                                 <p class="kt-widget4__text">
-                                                    +{{$live->amount}} руб. <i class="fal fa-angle-right"></i> ({{$live->type}}) <br> {{\App\Http\Controllers\GeneralController::formatDate(strtotime($live->created_at))}}
+                                                    +{{$live->amount}} rub. <i class="fal fa-angle-right"></i> ({{$live->type}}) <br> {{\App\Http\Controllers\GeneralController::formatDate(strtotime($live->created_at))}}
                                                 </p>
                                             </div>
                                         </div>

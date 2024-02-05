@@ -615,9 +615,9 @@
                     <a class="mobile-menu__submenu-item_social-link" onclick="setAudioGame(!isAudioGame)">
                         <script>$(document).ready(function () { isAudioGame ? ($("#game_audio_on_menu").fadeIn(0), $("#game_audio_off_menu").fadeOut(0)) : ($("#game_audio_off_menu").fadeIn(0), $("#game_audio_on_menu").fadeOut(0)) });</script>
                         <div class="fad fa-volume-up tooltip" id="game_audio_on_menu" style="display:none"
-                            title="Выключить звук"></div>
+                            title="Mute"></div>
                         <div class="fad fa-volume-slash tooltip" id="game_audio_off_menu" style="display:none"
-                            title="Включить звук"></div>
+                            title="Unmute"></div>
                     </a>
                     <a href="https://vk.com/{{$settings->vk_url}}" class="mobile-menu__submenu-item_social-link"
                         target="_blank">

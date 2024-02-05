@@ -33,7 +33,7 @@
                             <div class="kt-widget14">
                                 <div class="kt-widget14__header kt-margin-b-30">
                                     <h3 class="kt-widget14__title">
-                                        Количество игр за сегодня
+                                        Number of games за сегодня
                                     </h3>
                                 </div>
                                 <div class="kt-widget14__chart" style="height:330px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>

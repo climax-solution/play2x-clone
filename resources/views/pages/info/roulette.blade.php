@@ -17,7 +17,7 @@
                 <table class="info-table">
                     <tr>
                         <td>Ставка</td>
-                        <td>Выигрыш</td>
+                        <td>Winning</td>
                     </tr>
                     <tr>
                         <td>1 число</td>

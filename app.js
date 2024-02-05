@@ -342,7 +342,7 @@ setInterval(function () {
 			messages += 1;
             io.emit('chat message', JSON.stringify({
             'id': -1,
-            'message': 'Успешно выплачено <span>'+parseFloat(response.sum).toFixed(2)+' руб</span><br>на <span>'+response.pay+'</span>',
+            'message': 'Успешно выплачено <span>'+parseFloat(response.sum).toFixed(2)+' rub</span><br>на <span>'+response.pay+'</span>',
             'user_id': response.user_id,
             'avatar': response.avatar,
             'name': response.username,
@@ -351,7 +351,7 @@ setInterval(function () {
             }));
             addToHistory({
             'id': -1,
-            'message': 'Успешно выплачено <span>'+parseFloat(response.sum).toFixed(2)+' руб</span><br>на <span>'+response.pay+'</span>',
+            'message': 'Успешно выплачено <span>'+parseFloat(response.sum).toFixed(2)+' rub</span><br>на <span>'+response.pay+'</span>',
             'user_id': response.user_id,
             'avatar': response.avatar,
             'name': response.username,
@@ -451,7 +451,7 @@ io.on('connection', function(socket) {
         let json = JSON.parse(msg);
         let data = {
             'id': -1,
-            'message': 'Успешно выплачено <span>'+parseFloat(json.sum).toFixed(2)+' руб</span><br>на <span>'+json.pay+'</span>',
+            'message': 'Успешно выплачено <span>'+parseFloat(json.sum).toFixed(2)+' rub</span><br>на <span>'+json.pay+'</span>',
             'user_id': json.user_id,
             'avatar': json.avatar,
             'name': json.username,
@@ -532,8 +532,8 @@ io.on('connection', function(socket) {
                                         'id': messages,
                                         'message': '<div class="cg_info">' +
                                                 '<div class="cg_game" onclick="user_game_info('+s_json.game_id+', false)"><i class="'+drop.icon+'"></i> '+drop.name + '</div>' +
-                                                (drop.user_id === -2  ? '' : ('<div class="cg_val">Ставка: <span>'+drop.bet+' руб</span></div>')) +
-                                                '<div class="cg_val">Выигрыш: <span>'+(drop.status === 1 ? '+'+drop.amount : '0.00')+' руб.</span></div>' +
+                                                (drop.user_id === -2  ? '' : ('<div class="cg_val">Ставка: <span>'+drop.bet+' rub</span></div>')) +
+                                                '<div class="cg_val">Winning: <span>'+(drop.status === 1 ? '+'+drop.amount : '0.00')+' rub.</span></div>' +
                                             '</div>',
                                         'user_id': json.data.user_id,
                                         'avatar': response.avatar,
