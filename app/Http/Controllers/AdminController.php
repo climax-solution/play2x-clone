@@ -1642,7 +1642,7 @@ public function randomName() {
         $fill_labels = function($days) use($game_id) {
             $out = '';
             for($i = 0; $i < $days; $i++)
-                $out .= '"'.($i > 0 ? $i .'d back' : 'Today').'"'. ($i == $days - 1 ? '' : ',');
+                $out .= '"'.($i > 0 ? $i .'d ago' : 'Today').'"'. ($i == $days - 1 ? '' : ',');
             return $out;
         };
         $ids = (\App\User::where('chat_role', '<=', 3)->get()->pluck('id'));

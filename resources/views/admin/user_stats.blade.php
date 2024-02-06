@@ -165,7 +165,7 @@
                 $fill_labels = function($days) {
                     $out = '';
                     for($i = 0; $i < $days; $i++)
-                        $out .= '"'.($i > 0 ? $i .' d back' : 'Today').'",';
+                        $out .= '"'.($i > 0 ? $i .' d ago' : 'Today').'",';
                     return $out;
                 };
             @endphp
