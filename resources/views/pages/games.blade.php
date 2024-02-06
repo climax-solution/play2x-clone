@@ -10,7 +10,7 @@
                     </div>
                     <div class="slide-content">
                         Do you want to stay up to date with the news? Receive free bonuses? Promotional codes, sweepstakes and much more.<br>
-                         Come to our VK group - <a class="ll" href="https://vk.com/bankwin" target="_blank">Bets Play2x</a>
+                         Come to our VK group - <a class="ll" href="https://vk.com/bankwin" target="_blank">SpinnersBay </a>
                     </div>
                 </div>
                 <button class="slide-button" onclick="window.open('https://vk.com/bankwin', '_blank')">Go</button>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="welcome_Left__JPT6w">
 
-                    <div class="welcome_Intro__3Zo-O">Bets Play2x – Instant games with money withdrawal. The best licensed site for relaxation and earning money.
+                    <div class="welcome_Intro__3Zo-O">SpinnersBay – Instant games with money withdrawal. The best licensed site for relaxation and earning money.
                     </div>
 					@php
 					$users = (\DB::table('users')->count() + $settings->fakesumusers);
@@ -311,7 +311,7 @@
             <div class="i_game_overlay-bonus i_game_overlay-bonus_3 hidden-xs"></div>
             <div class="i_game-name bonus_banner_desc" id="bonus_banner_name">
                 <i class="fad fa-coins i_y_i" style="margin-right: 5px"></i><span class="i_y_i">Bonus</span><br>
-                Get a cash bonus<br>for free to start playing at Bets Play2x!
+                Get a cash bonus<br>for free to start playing at SpinnersBay!
             </div>
         </div>
     </div>

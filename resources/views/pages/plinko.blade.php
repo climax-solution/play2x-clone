@@ -53,7 +53,7 @@
             </div>
             <div class="col-xs-12">
                 <div class="b_label">
-                    Risk level
+                    Risk
                 </div>
             </div>
             <div class="col-xs-12 mb5 mt5">

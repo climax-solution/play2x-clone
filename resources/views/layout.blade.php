@@ -643,29 +643,29 @@
                         <div class="footer__block-header"><span style="color: white;">BAN</span><span
                                 style="color: #4c4c4c">KI</span></div>
                         <font size=2 color="#748993">
-                            <h1>Play2x</h1>
+                            <h1>SpinnersBay</h1>
                             <p>If you, my friend, have nothing to do tonight, then let me recommend you the online game
                                 <strong>Play 2x</strong>.
                                 Our online resource Betsplay2x is a collection of the best instant games with the
                                 possibility of earning and withdrawing funds.</p>
                             <h2>Banki - mobile version</h2>
                             <p>World progress is constantly moving forward and gives us the opportunity to play Play 2x
-                                from mobile devices. Our Play2x is fully adapted to your gadgets.
-                                Now <strong>Play2x official website</strong> becomes available outside the home, and
+                                from mobile devices. Our SpinnersBay is fully adapted to your gadgets.
+                                Now <strong>SpinnersBay official website</strong> becomes available outside the home, and
                                 even at work, at school or in the park.</p>
                             <p>In other words, the play 2x service offers its users to play from mobile devices, and for
                                 this they do not need to download and install additional applications on their phone.
                             </p>
 
-                            <h3>Play on the official Play2x website in full and honestly</h3>
+                            <h3>Play on the official SpinnersBay website in full and honestly</h3>
                             <p>Since the hash code of the game is visible at the beginning of each game, thanks to it it
                                 will not be difficult to check the honesty of our resource.
                                 By investing, you can be sure that the site administration will ensure that the game is
                                 fair,
-                                because Play2x developers are improving our security system every day.</p>
+                                because SpinnersBay developers are improving our security system every day.</p>
 
                             <h3>Distribution of promotional codes</h3>
-                            <p>Every day the Play2x website distributes free promotional codes, with us you can <b>play
+                            <p>Every day the SpinnersBay website distributes free promotional codes, with us you can <b>play
                                     without a deposit</b> using the received code for replenishment.</p>
                             <p>At the same time, real money is credited to the account, so the user can experiment with
                                 a variety of strategies to get even greater profits.
@@ -676,7 +676,7 @@
                             <p>Invite your friends and win cash prizes together while sitting at home on your sofa or
                                 armchair, without distractions.
                                 The advanced referral system awards 10 rubles. to your friend.
-                                To invite, take one easy step - send him a link to the <b>Play2x website</b> or post it
+                                To invite, take one easy step - send him a link to the <b>SpinnersBay website</b> or post it
                                 on social networks, forums.</p>
 
                             <h4>Fast payouts on the real Play 2x website</h4>
