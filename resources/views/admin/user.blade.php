@@ -55,7 +55,7 @@
                                     </div>
                                 @else
                                     <div class="kt-widget__info">
-                                        <span class="kt-widget__label">In contact with:</span>
+                                        <span class="kt-widget__label">VKontakte:</span>
                                         <a href="https://vk.com/id{{$user->login2}}" target="_blank" class="kt-widget__data">
                                             {{$user->login2}}
                                         </a>

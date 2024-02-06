@@ -9,7 +9,7 @@
 				<div class="game-sidebar-tabs"><div class="game-sidebar-tab active" onclick="setMode('default')" data-tab="default">Manual</div><div class="game-sidebar-tab" onclick="setMode('auto')" data-tab="auto">Auto</div></div>
                 <div class="col-xs-12 mb10">
                     <div class="b_label">
-                        Bet amount
+                        Amount
                     </div>
                 </div>
                 <div class="col-xs-12">

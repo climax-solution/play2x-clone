@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="b_label">
-                        Bet amount
+                        Amount
                     </div>
                 </div>
                 <div class="col-xs-12 mt10">

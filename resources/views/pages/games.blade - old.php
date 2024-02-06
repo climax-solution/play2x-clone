@@ -330,7 +330,7 @@
         <div class="i_game i_game-vk" onclick="var win = window.open('https://vk.com/uptouch', '_blank'); win.focus()" id="vk_banner">
             <i class="fab fa-vk i_game_overlay-vk"></i>
             <div class="i_game-name vk_banner_desc" id="vk_banner_name">
-                <i class="fab fa-vk i_b_i"></i><span class="i_b_i">In contact with</span><br>
+                <i class="fab fa-vk i_b_i"></i><span class="i_b_i">VKontakte</span><br>
                 Join the VKontakte group<br>
                 and stay up to date with all the news<br>
                 as well as special promotional codes!

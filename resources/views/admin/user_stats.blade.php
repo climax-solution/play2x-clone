@@ -33,7 +33,7 @@
                         <div class="kt-widget24__details">
                             <div class="kt-widget24__info">
                                 <h4 class="kt-widget24__title">
-                                    In contact with
+                                    VKontakte
                                 </h4>
                                 <span class="kt-widget24__desc">
 					            Registered via <i class="fab fa-vk"></i>
