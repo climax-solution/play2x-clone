@@ -5,12 +5,12 @@
         <div class="info-block">
             <div class="info-block-title"><i class="icon-keno"></i> Keno</div>
             <div class="info-block-content">
-                Выберите от 1 до 10 ячеек с числами, сделайте ставку и нажмите "Играть"
+                Select from 1 to 10 cells with numbers, place a bet and click "Play"
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Далее система случайным образом выбирает 10 чисел. Чем больше будет попаданий по вашим числам, тем больше будет выигрыш!
+                Next, the system randomly selects 10 numbers. The more hits your numbers get, the bigger your winnings!
             </div>
         </div>
         @include('pages.info.general_info')

@@ -3,28 +3,29 @@
 
     <div class="info-container">
         <div class="info-block">
-            <div class="info-block-title">Что это?</div>
+            <div class="info-block-title">What is this?</div>
             <div class="info-block-content">
-                Принимай участие в еженедельных заданиях и выигрывай призы!
+                Take part in weekly challenges and win prizes!
             </div>
             <div class="info-block-content">
-                У каждого задания есть условие, которое требуется выполнить для получения награды.
+                Each task has a condition that must be met to receive a reward.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title">Как участвовать?</div>
+            <div class="info-block-title">How to participate?</div>
             <div class="info-block-content">
-                Для участия в задании приобрети одну или несколько попыток.
+                To participate in the task, purchase one or more attempts.
             </div>
             <div class="info-block-content info-strong">
-                Попытки тратятся после каждой игры независимо от ее результата.
+                Attempts are spent after each game, regardless of its result.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title">Играй!</div>
+            <div class="info-block-title">Play!</div>
             <div class="info-block-content">
-                Играй в игры как и обычно -<br>
-                мы дадим знать о всем, что требуется: кол-во оставшихся попыток, а так же выполнили ли вы условие или нет!
+                Play games as usual -<br>
+                We will let you know everything that is required: the number of remaining attempts, as well as whether
+                you have fulfilled the condition or not!
             </div>
         </div>
     </div>

@@ -5,12 +5,12 @@
         <div class="info-block">
             <div class="info-block-title"><i class="icon-crash"></i> Crash</div>
             <div class="info-block-content">
-                Сделайте ставку, нажмите "Играть" и следите за тем, как растет график.
+                Place a bet, click "Play" and watch the graph grow.
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Выведите средства до того, как график обрушится и вы потеряете ставку.
+                Withdraw before the chart crashes and you lose your bet.
             </div>
         </div>
         @include('pages.info.general_info')

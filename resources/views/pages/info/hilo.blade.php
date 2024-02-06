@@ -3,26 +3,27 @@
 
     <div class="info-container">
         <div class="info-block">
-            <div class="info-block-title"><i class="icon-hilo"></i> HiLo</div>
+            <div class="info-block-title"><i class="icon-hilo"></i>HiLo</div>
             <div class="info-block-content">
-                Сделайте ставку и нажмите "Играть"
+                Place your bet and click "Play"
             </div>
             <div class="info-block-content">
-                Угадывайте, будет ли следующая карта выше или ниже предыдущей по рангу.
-            </div>
-        </div>
-        <div class="info-block">
-            <div class="info-block-content">
-                Открывайте неограниченное количество карт - коэффициенты суммируются.
-            </div>
-            <div class="info-block-content">
-                Вы можете остановиться в любой момент и забрать свой выигрыш.
+                Guess whether the next card will be higher or lower in rank than the previous one.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title">Ранг в колоде</div>
             <div class="info-block-content">
-                <i class="fad fa-clone game_info-icon_info"></i> Король (K) является самой высокой картой, а <i class="fad fa-clone game_info-icon_info"></i> Туз (A) - самой низшей.
+                Open an unlimited number of cards - the odds are summed up.
+            </div>
+            <div class="info-block-content">
+                You can stop at any time and collect your winnings.
+            </div>
+        </div>
+        <div class="info-block">
+            <div class="info-block-title">Rank in deck</div>
+            <div class="info-block-content">
+                The<i class="fad fa-clone game_info-icon_info"></i>King (K) is the highest card and the<i
+                    class="fad fa-clone game_info-icon_info"></i>Ace (A) - the lowest.
             </div>
         </div>
         @include('pages.info.general_info')

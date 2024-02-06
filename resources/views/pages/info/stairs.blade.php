@@ -5,20 +5,21 @@
         <div class="info-block">
             <div class="info-block-title"><i class="icon-stairs"></i> Stairs</div>
             <div class="info-block-content">
-                Сделайте ставку, выберите количество камней на ход и нажмите "Играть"
+                Place a bet, select the number of stones per move and click "Play"
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Взбирайтесь вверх по лестнице, но остерегайтесь падающих камней!
+                Climb up the stairs, but beware of falling rocks!
             </div>
             <div class="info-block-content">
-                Чем выше вы подниметесь - тем выше коэффициент.
+                The higher you go, the higher the coefficient.
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Вы можете забрать свой выигрыш в любой момент, либо вы можете попытаться пройти все 13 ходов и получить максимальную награду.
+                You can withdraw your winnings at any time, or you can try to complete all 13 turns and get the maximum
+                reward.
             </div>
         </div>
         @include('pages.info.general_info')

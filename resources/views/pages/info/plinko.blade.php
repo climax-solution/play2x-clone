@@ -5,17 +5,18 @@
         <div class="info-block">
             <div class="info-block-title"><i class="fas fa-ball-pile"></i> Plinko</div>
             <div class="info-block-content">
-                Сделайте ставку, выберите сложность игры и количество пинов, и нажмите "Играть"
+                Place a bet, select the game difficulty and number of pins, and click "Play"
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Чем больше сложность игры и количество пинов, тем становится выше максимальный и ниже минимальный коэффициент выигрыша
+                The greater the difficulty of the game and the number of pins, the higher the maximum and lower the
+                minimum winning odds.
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Ваша награда определяется коэффициентом выигрыша, в зависимости от того, куда упал шарик
+                Your reward is determined by the winning odds, depending on where the ball lands
             </div>
         </div>
         @include('pages.info.general_info')

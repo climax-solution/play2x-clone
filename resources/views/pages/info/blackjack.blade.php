@@ -3,40 +3,41 @@
 
     <div class="info-container">
         <div class="info-block">
-            <div class="info-block-title"><i class="icon-blackjack"></i> Blackjack</div>
+            <div class="info-block-title"><i class="icon-blackjack"></i>Blackjack</div>
             <div class="info-block-content">
-                Сделайте ставку и нажмите "Играть", после чего Вам и дилеру рададут по две карты.
+                Place a bet and click “Play”, after which you and the dealer will be given two cards each.
             </div>
             <div class="info-block-content">
-                Далее вы можете взять еще карту или остановиться и не менять текущую руку.
-            </div>
-        </div>
-        <div class="info-block">
-            <div class="info-block-content">
-                Нажав "Удвоить" вы удваиваете свою ставку и берете последнюю карту.
-            </div>
-            <div class="info-block-content">
-                Страховка доступна только тогда, когда первая карта дилера - это туз и застраховывает вас от дилера с блэкджеком.
+                Then you can take another card or stop and not change the current hand.
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Побеждает тот, кто окажется ближайшим к 21. Если у вас и у дилера окажется одинаковое значение - будет ничья.
+                By clicking "Double" you double your bet and take the last card.
             </div>
-        </div>
-        <div class="info-block">
-            <div class="info-block-title">Правила</div>
             <div class="info-block-content">
-                Неограниченное количество колод в игре.<br>
-                Страховка доступна, когда первая карта дилера - туз.<br>
-                Если у игрока и у дилера натуральный блэкджек, то результат - ничья.
+                Insurance is only available when the dealer's first card is an Ace and insures you against the dealer
+                with blackjack.
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Если у дилера натуральный блэкджек, игра заканчивается, и если была страховка, то она оплачивается.<br>
-                Удвоение можно делать на любые первые 2 карты.<br>
-                Дилер останавливается, если достиг 17-ти.
+                The winner is the one closest to 21. If you and the dealer have the same value, there will be a draw.
+            </div>
+        </div>
+        <div class="info-block">
+            <div class="info-block-title">Rules</div>
+            <div class="info-block-content">
+                Unlimited number of decks in the game.<br>
+                Insurance is available when the dealer's first card is an Ace.<br>
+                If the player and the dealer have a natural blackjack, then the result is a draw.
+            </div>
+        </div>
+        <div class="info-block">
+            <div class="info-block-content">
+                If the dealer has a natural blackjack, the game ends, and if there was insurance, then it is paid.<br>
+                You can double on any first 2 cards.<br>
+                The dealer stops if he reaches 17.
             </div>
         </div>
         @include('pages.info.general_info')

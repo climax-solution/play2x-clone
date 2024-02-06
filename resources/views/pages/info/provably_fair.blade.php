@@ -5,28 +5,30 @@
         <div class="info-block">
             <div class="info-block-title">Client hash</div>
             <div class="info-block-content">
-                Хэш, который может быть изменен вами.
+                A hash that can be modified by you.
                 <br>
-                Обратите внимание, что после его изменения все прошлые игры будут отображать недействительный результат.
+                Please note that after changing this, all past games will display an invalid result.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title">Серверный хэш</div>
+            <div class="info-block-title">Server hash</div>
             <div class="info-block-content">
-                Хэш, случайным образом выдаваемый сервером.
+                A hash randomly issued by the server.
             </div>
             <div class="info-block-content info-strong">
-                Уникален для каждой игры. Вы узнаете хэш только после завершения игры.
+                Unique for each game. You will only find out the hash after finishing the game.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title"><i class="fab fa-github" style="margin-right: 1px;"></i> Исходный код</div>
+            <div class="info-block-title"><i class="fab fa-github" style="margin-right: 1px;"></i> Source code</div>
             <div class="info-block-content">
-                Исходный код доступен <a href="https://github.com/rogervila/provably-fair" target="_blank" class="ll">на этой странице</a>.
+                The source code is available <a href="https://github.com/rogervila/provably-fair" target="_blank"
+                    class="ll">on this page</a>.
             </div>
         </div>
     </div>
 </div>
 
-<p><i class="fab fa-github" style="margin-right: 1px;"></i> Исходный код</p><hr>
-<p>Исходный код доступен <a href="https://github.com/rogervila/provably-fair" target="_blank" class="ll">на этой странице</a>.</p>
+<p><i class="fab fa-github" style="margin-right: 1px;"></i> Source code</p>
+<hr>
+<p>The source code is available <a href="https://github.com/rogervila/provably-fair" target="_blank" class="ll">on this page</a>.</p>

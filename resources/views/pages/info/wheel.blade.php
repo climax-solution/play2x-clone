@@ -5,16 +5,16 @@
         <div class="info-block">
             <div class="info-block-title"><i class="fad fa-circle-notch"></i> Wheel</div>
             <div class="info-block-content">
-                Выберите режим игры, сделайте ставку на цвет и нажмите "Играть"
+                Select a game mode, place a bet on a color and click "Play"
             </div>
             <div class="info-block-content">
-                Если колесо остановится на том цветовом секторе, который вы выбрали - вы выиграли!
+                If the wheel lands on the color sector you chose, you win!
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title"><i class="fas fa-bolt"></i> Быстрая игра</div>
+            <div class="info-block-title"><i class="fas fa-bolt"></i> Quick game</div>
             <div class="info-block-content">
-                При включении серьезно ускоряет вращение колеса.
+                When turned on, it seriously speeds up the rotation of the wheel.
             </div>
         </div>
         @include('pages.info.general_info')

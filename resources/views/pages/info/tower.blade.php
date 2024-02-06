@@ -5,15 +5,16 @@
         <div class="info-block">
             <div class="info-block-title"><i class="fad fa-chess-rook"></i> Tower</div>
             <div class="info-block-content">
-                Сделайте ставку, выберите количество бомб и нажмите "Играть"
+                Place your bet, select the number of bombs and click "Play"
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Ищите камни <i class="fad fa-diamond"></i>, двигаясь сверху вниз, но остерегайтесь бомб <i class="fas fa-bomb"></i>!
+                Look for rocks<i class="fad fa-diamond"></i>as you move from top to bottom, but beware of bomb<i
+                    class="fas fa-bomb"></i>s!
             </div>
             <div class="info-block-content">
-                Заберите выигрыш до того, как вы подорветесь на бомбе и потеряете ставку!
+                Claim your winnings before you get hit by a bomb and lose your bet!
             </div>
         </div>
         @include('pages.info.general_info')

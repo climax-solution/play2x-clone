@@ -3,44 +3,44 @@
 
     <div class="info-container">
         <div class="info-block">
-            <div class="info-block-title"><i class="icon-roulette"></i> Roulette</div>
+            <div class="info-block-title"><i class="icon-roulette"></i>Roulette</div>
             <div class="info-block-content">
-                Поставьте фишки на любой исход игры и нажмите "Играть"
+                Place your chips on any outcome of the game and click "Play"
             </div>
             <div class="info-block-content">
-                Если вы угадали исход игры - вы умножаете вашу ставку.
+                If you guess the outcome of the game, you multiply your bet.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title">Коэффициенты</div>
+            <div class="info-block-title">Odds</div>
             <div class="info-block-content">
                 <table class="info-table">
                     <tr>
-                        <td>Ставка</td>
+                        <td>Rate</td>
                         <td>Winning</td>
                     </tr>
                     <tr>
-                        <td>1 число</td>
+                        <td>1 number</td>
                         <td>x36</td>
                     </tr>
                     <tr>
-                        <td>Линия</td>
+                        <td>Line</td>
                         <td>x3</td>
                     </tr>
                     <tr>
-                        <td>Столбец</td>
+                        <td>Column</td>
                         <td>x3</td>
                     </tr>
                     <tr>
-                        <td>Красное/Черное</td>
+                        <td>Red/Black</td>
                         <td>x2</td>
                     </tr>
                     <tr>
-                        <td>Чет/Нечет</td>
+                        <td>Even/Odd</td>
                         <td>x2</td>
                     </tr>
                     <tr>
-                        <td>1 до 18/19 до 36</td>
+                        <td>1 to 18/19 to 36</td>
                         <td>x2</td>
                     </tr>
                 </table>

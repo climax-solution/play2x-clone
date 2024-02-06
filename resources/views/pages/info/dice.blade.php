@@ -5,15 +5,15 @@
         <div class="info-block">
             <div class="info-block-title"><i class="fa fa-dice"></i> Dice</div>
             <div class="info-block-content">
-                Сделайте ставку и нажмите "Играть"
+                Place your bet and click "Play"
             </div>
             <div class="info-block-content">
-                Настройте ползунком шанс выигрыша,<br>чтобы сгенерировать<br>результат от 0 - 100
+                Adjust the win chance slider<br>to generate<br>a result from 0 - 100
             </div>
         </div>
         <div class="info-block">
             <div class="info-block-content">
-                Если кости выпали в выбранной Вами зеленой зоне, Вы выиграли!
+                If the dice land in your chosen green zone, you win!
             </div>
         </div>
         @include('pages.info.general_info')

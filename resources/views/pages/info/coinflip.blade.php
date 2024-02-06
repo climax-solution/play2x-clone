@@ -5,22 +5,22 @@
         <div class="info-block">
             <div class="info-block-title"><i class="fas fa-coin"></i> Coinflip</div>
             <div class="info-block-content">
-                Сделайте ставку, нажмите "Играть" и начинайте угадывать, какой стороной упадет монетка.
+                Place a bet, click “Play” and start guessing which way the coin will land.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title">Серия побед</div>
+            <div class="info-block-title">Winning streak</div>
             <div class="info-block-content">
-                По мере продолжения серии побед коэффициент увеличивается.
+                As the winning streak continues, the odds increase.
             </div>
             <div class="info-block-content">
-                В любой момент вы можете забрать свой выигрыш. В случае проигрыша вы теряете свою ставку.
+                You can withdraw your winnings at any time. If you lose, you lose your bet.
             </div>
         </div>
         <div class="info-block">
-            <div class="info-block-title"><i class="fas fa-bolt"></i> Быстрая игра</div>
+            <div class="info-block-title"><i class="fas fa-bolt"></i> Quick game</div>
             <div class="info-block-content">
-                При включении серьезно ускоряет вращение монетки.
+                When turned on, it seriously speeds up the rotation of the coin.
             </div>
         </div>
         @include('pages.info.general_info')
@@ -28,10 +28,10 @@
 </div>
 
 <div class="dn">Coinflip</div>
-<p>Угадайте, какой стороной упадет монетка и заработайте деньги!</p>
+<p>Guess which side the coin will fall on and earn money!</p>
 <br>
-<p><i class="fa fa-asterisk"></i> Серия побед</p>
-<p>Вы начинаете игру с минимальным коэффициентом. По мере продолжения серии побед коэффициент увеличивается.</p>
-<p>В любой момент вы можете забрать свой выигрыш. В случае проигрыша вы теряете свою ставку и заработанный выигрыш.</p>
+<p><i class="fa fa-asterisk"></i>Victory streak</p>
+<p>You start the game with the minimum odds. As the winning streak continues, the odds increase.</p>
+<p>You can withdraw your winnings at any time. If you lose, you lose your bet and your winnings.</p>
 
 @include('pages.info.general_info')
